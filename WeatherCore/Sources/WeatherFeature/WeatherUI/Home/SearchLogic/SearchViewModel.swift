@@ -3,26 +3,19 @@ import RestAPI
 import SwiftUI
 
 enum WeatherAppState: Equatable {
-    case idle,
-         savedCity,
-         searchCity,
-         showResultView,
-         showSelectedCityView
+    case noLocationSelected,
+         searchingLocationBy(city: String),
+         locationSelected(WeatherModel),
+         locationDetails(WeatherModel),
+         somethingWentWrong(error: String)
 }
 
 @MainActor
 @Observable
 final class SearchViewModel {
-    var searchText: String = ""
-    var resultWeather: WeatherModel? {
-        didSet {
-            appState = .showResultView
-        }
-    }
     var weatherIconData: Data?
     let prompt: LocalizedStringKey = "Search Location"
-    var appState: WeatherAppState = .idle
-    var output: String?
+    var appState: WeatherAppState = .noLocationSelected
     
     private var restAPI: RestAPI
     
@@ -30,11 +23,14 @@ final class SearchViewModel {
         self.restAPI = restAPI
     }
     
-    func fetchWeatherData() async {
+    func fetchWeatherData(from city: String) async -> WeatherModel? {
         do {
-            resultWeather = try await restAPI.fetch(searchText)
+            return try await restAPI.fetch(city)
         } catch {
-            output = error.localizedDescription
+            appState = .somethingWentWrong(
+                error: error.localizedDescription
+            )
         }
+        return nil
     }
 }

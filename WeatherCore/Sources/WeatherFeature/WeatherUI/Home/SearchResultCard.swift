@@ -8,19 +8,18 @@
 import SwiftUI
 
 struct SearchResultCard: View {
-    var city: String
-    var temp: Double
-    var imageUrl: String
+    var model: WeatherModel
+    @Binding var appState: WeatherAppState
+    
     private var imageURL: URL {
-        let iconName = String(imageUrl.split(separator: "/").last ?? "")
+        let iconName = String(model.current.condition.icon.split(separator: "/").last ?? "")
         let iconUrl = "https://cdn.weatherapi.com/weather/128x128/day/\(iconName)"
         return URL(string: iconUrl)!
     }
     private var tempFormatted: String {
-        let measure = Measurement<UnitTemperature>(value: temp, unit: .fahrenheit)
+        let measure = Measurement<UnitTemperature>(value: model.current.tempF, unit: .fahrenheit)
         return measure.formatted()
     }
-    @Binding var appState: WeatherAppState
     var body: some View {
         VStack {
             Rectangle()
@@ -35,7 +34,7 @@ struct SearchResultCard: View {
                         .padding(.top, 16)
                 }
                 .onTapGesture {
-                    appState = .showSelectedCityView
+                    appState = .locationDetails(model)
                 }
             Spacer()
         }
@@ -61,18 +60,10 @@ struct SearchResultCard: View {
     
     var cityView: some View {
         VStack {
-            Text(city)
+            Text(model.location.name)
                 .font(.title.bold())
             Text(tempFormatted)
                 .font(.system(size: 48, weight: .bold))
         }
     }
-}
-
-#Preview {
-    SearchResultCard(
-        city: "Mumbai",
-        temp: 15,
-        imageUrl: "https://cdn.weatherapi.com/weather/128x128/day/113.png",
-        appState: .constant(.idle))
 }

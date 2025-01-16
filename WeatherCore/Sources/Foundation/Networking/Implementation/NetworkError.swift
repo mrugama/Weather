@@ -1,6 +1,6 @@
 import Foundation
 
-enum NetworkError: LocalizedError {
+enum NetworkError: LocalizedError, Equatable {
     case invalidURL,
          invalidResponse,
          requestFailed(statusCode: Int)

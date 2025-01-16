@@ -2,7 +2,7 @@ import Foundation
 import Networking
 import EndpointManager
 
-enum RestAPIError: LocalizedError {
+enum RestAPIError: LocalizedError, Equatable {
     case invalidDataType
 }
 

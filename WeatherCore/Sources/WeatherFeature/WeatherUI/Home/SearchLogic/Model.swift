@@ -1,11 +1,11 @@
 import Foundation
 
-struct WeatherModel: Decodable {
+struct WeatherModel: Decodable, Equatable {
     let location: Location
     let current: Current
 }
 
-struct Location: Decodable {
+struct Location: Decodable, Equatable {
     let name: String
     let region: String
     let country: String
@@ -16,7 +16,7 @@ struct Location: Decodable {
     let localtime: String
 }
 
-struct Current: Decodable {
+struct Current: Decodable, Equatable {
     let lastUpdatedEpoch: Int
     let lastUpdated: String
     let tempC: Double
@@ -37,7 +37,7 @@ struct Current: Decodable {
     let feelslikeF: Double
 }
 
-struct Condition: Decodable {
+struct Condition: Decodable, Equatable {
     let text: String
     let icon: String
     let code: Int

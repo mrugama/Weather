@@ -9,43 +9,41 @@ import SwiftUI
 
 struct HomePage: View {
     @State private var viewModel: SearchViewModel
+    @State private var searchText: String = ""
     @AppStorage("SelectedCity") var selectedCity: String?
     var body: some View {
         NavigationStack {
-            if viewModel.appState == .showResultView, let model = viewModel.resultWeather {
-                SearchResultCard(
-                    city: model.location.name,
-                    temp: model.current.tempF,
-                    imageUrl: model.current.condition.icon,
-                    appState: $viewModel.appState
-                )
-            } else if viewModel.appState == .showSelectedCityView, let model = viewModel.resultWeather {
-                SearchResultContent(model)
-            } else {
+            switch viewModel.appState {
+            case .noLocationSelected:
                 SearchContentUnavailableView()
+            case .searchingLocationBy(city: let city):
+                ProgressView {
+                    Text("Serching city: \(city)")
+                }
+            case .locationSelected(let model):
+                SearchResultCard(model: model, appState: $viewModel.appState)
+            case .locationDetails(let model):
+                SearchResultContent(model)
+            case .somethingWentWrong(let error):
+                ContentUnavailableView(error, image: "exclamationmark.triangle.fill")
             }
         }
-        .onAppear {
-            if let city = selectedCity {
-                viewModel.searchText = city
-                Task {
-                    await viewModel.fetchWeatherData()
-                    viewModel.appState = .showSelectedCityView
-                }
+        .task {
+            if let city = selectedCity,
+               let location = await viewModel.fetchWeatherData(from: city) {
+                viewModel.appState = .locationDetails(location)
             }
         }
         .task(id: viewModel.appState) {
-            switch viewModel.appState {
-            case .savedCity, .searchCity:
-                await viewModel.fetchWeatherData()
-            case .showSelectedCityView:
-                selectedCity = viewModel.searchText
-            default: break
+            if case .searchingLocationBy(let city) = viewModel.appState,
+                let location = await viewModel.fetchWeatherData(from: city) {
+                viewModel.appState = .locationSelected(location)
+                
             }
         }
-        .searchable(text: $viewModel.searchText, prompt: viewModel.prompt)
+        .searchable(text: $searchText, prompt: viewModel.prompt)
         .onSubmit(of: .search) {
-            viewModel.appState = .searchCity
+            viewModel.appState = .searchingLocationBy(city: searchText)
         }
     }
     

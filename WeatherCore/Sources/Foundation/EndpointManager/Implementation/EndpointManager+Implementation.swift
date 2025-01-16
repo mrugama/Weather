@@ -1,6 +1,6 @@
 import Foundation
 
-enum EndpointError: LocalizedError {
+enum EndpointError: LocalizedError, Equatable {
     case invalidURL
     
     var errorDescription: String? {
