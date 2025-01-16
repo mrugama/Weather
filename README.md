@@ -1,4 +1,8 @@
 # Weather
+| No location selected | Searching location | Selected location |
+| ---- | ---- | ---- |
+| <img src="https://github.com/user-attachments/assets/4d12ef91-7914-4686-8f56-f7b3c12c926e" alt="Example Image" width="200"> | <img src="https://github.com/user-attachments/assets/3c3fb908-5a99-4a13-9611-bcba75bb18b9" alt="Example Image" width="200"> | <img src="https://github.com/user-attachments/assets/b511c59f-e025-4cce-85c4-d575c842fb01" alt="Example Image" width="200"> |
+
 
 ### Steps to Run the App
 1. Clone the Repository
