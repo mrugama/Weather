@@ -13,7 +13,7 @@ enum EndpointError: LocalizedError {
 
 struct ConcreteEndpointManager: EndpointManager {
     private var apiKey: String {
-        "de87ceadb0c44a43a07134958251501"
+        "PASTE-YOUR-KEYAPI-HERE"
     }
     
     private var configuration: EndpointConfiguration
