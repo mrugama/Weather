@@ -19,22 +19,24 @@ struct SearchResultCard: View {
     
     var body: some View {
         VStack {
-            Rectangle()
-                .fill(Color(red: 242/255, green: 242/255, blue: 242/255))
-                .cornerRadius(16)
+            contentView
                 .frame(height: 117)
-                .padding([.leading, .trailing, .top], 16)
-                .overlay {
-                    contentView
-                        .frame(maxWidth: .infinity)
-                        .padding([.leading, .trailing], 36)
+                .padding(.top, 48)
+                .padding([.leading, .trailing], 48)
+                .background(
+                    Rectangle()
+                        .fill(Color(red: 242/255, green: 242/255, blue: 242/255))
+                        .cornerRadius(16)
                         .padding(.top, 32)
-                }
-                .onTapGesture {
-                    withAnimation {
-                        appState = .locationDetails(model: model, city: model.location.name)
-                    }
-                }
+                        .padding([.leading, .trailing], 16)
+                        .overlay {
+                        }
+                        .onTapGesture {
+                            withAnimation {
+                                appState = .locationDetails(model: model, city: model.location.name)
+                            }
+                        }
+                )
             Spacer()
         }
     }
@@ -58,11 +60,17 @@ struct SearchResultCard: View {
     }
     
     var cityView: some View {
-        VStack {
+        VStack(alignment: .center, spacing: 13) {
             Text(model.location.name)
-                .font(.title3.weight(.semibold))
-            Text("\(String(format: "%.0f", floor(model.current.tempF)))°")
-                .font(.system(size: 60, weight: .bold))
+                .font(.title.weight(.semibold))
+            Text("\(String(format: "%.0f", floor(model.current.tempF)))")
+                .font(.system(size: 42, weight: .bold))
+                .overlay(alignment: .topTrailing) {
+                    Text("°")
+                        .font(.caption2.weight(.bold))
+                        .padding(.top, 8)
+                        .padding(.trailing, -8)
+                }
         }
         .foregroundStyle(Color(red: 44/255, green: 44/255, blue: 44/255))
     }

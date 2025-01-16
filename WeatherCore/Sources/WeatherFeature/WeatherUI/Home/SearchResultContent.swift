@@ -81,32 +81,42 @@ struct SearchResultContent: View {
                     feelsLikeView
                 }
                 .padding()
-                .foregroundStyle(Color(red: 196/255, green: 196/255, blue: 196/255))
             }
     }
     
     var humidityView: some View {
-        VStack {
+        VStack(spacing: 2) {
             Text("Humidity")
+                .foregroundStyle(Color(red: 196/255, green: 196/255, blue: 196/255))
+                .font(.caption)
             Text(humidity, format: .percent)
+                .foregroundStyle(Color(red: 154/255, green: 154/255, blue: 154/255))
+                .font(.subheadline)
         }
         .font(.caption)
     }
     
     var uvView: some View {
-        VStack {
+        VStack(spacing: 2) {
             Text("UV")
+                .foregroundStyle(Color(red: 196/255, green: 196/255, blue: 196/255))
+                .font(.caption)
             Text(uv, format: .number.rounded(increment: 0.0))
+                .foregroundStyle(Color(red: 154/255, green: 154/255, blue: 154/255))
+                .font(.subheadline)
         }
         .font(.caption)
     }
     
     var feelsLikeView: some View {
-        VStack {
+        VStack(spacing: 2) {
             Text("Feels Like")
+                .foregroundStyle(Color(red: 196/255, green: 196/255, blue: 196/255))
+                .font(.caption)
             Text("\(String(format: "%.0f", floor(feelsLike)))°")
+                .foregroundStyle(Color(red: 154/255, green: 154/255, blue: 154/255))
+                .font(.subheadline)
         }
-        .font(.caption)
     }
 }
 
