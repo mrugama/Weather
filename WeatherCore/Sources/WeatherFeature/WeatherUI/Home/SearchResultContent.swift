@@ -9,11 +9,11 @@ import SwiftUI
 
 struct SearchResultContent: View {
     var imageUrl: String
-    var city: String
+    var condition: String
     var temp: Double
     var humidity: Int
     var uv: Double
-    var feelLike: Double
+    var feelsLike: Double
     
     private var imageURL: URL {
         let iconName = String(imageUrl.split(separator: "/").last ?? "")
@@ -21,19 +21,10 @@ struct SearchResultContent: View {
         return URL(string: iconUrl)!
     }
     
-    var tempFormatted: String {
-        let measure = Measurement<UnitTemperature>(value: temp, unit: .fahrenheit)
-        return measure.formatted()
-    }
-    var feelLikeFormatted: String {
-        let measure = Measurement<UnitTemperature>(value: feelLike, unit: .fahrenheit)
-        return measure.formatted()
-    }
-    
     var body: some View {
         VStack(spacing: 24) {
             iconView
-            cityView
+            conditionView
             temperatureView
             sectionView
         }
@@ -46,26 +37,27 @@ struct SearchResultContent: View {
             case .success(let image):
                 image
                     .resizable()
-                    .frame(width: 160, height: 160)
+                    .frame(width: 124, height: 124)
             default:
                 ProgressView()
-                    .frame(width: 160, height: 160)
+                    .frame(width: 124, height: 124)
             }
         }
     }
     
-    var cityView: some View {
+    var conditionView: some View {
         HStack {
-            Text(city)
+            Text(condition)
+                .font(.title)
             Image(systemName: "location.fill")
+                .font(.title2)
         }
-        .font(.title)
         .fontWeight(.semibold)
     }
     
     var temperatureView: some View {
-        Text(tempFormatted)
-            .font(.system(size: 64).bold())
+        Text("\(String(format: "%.0f", floor(temp)))°")
+            .font(.system(size: 70).bold())
     }
     
     var sectionView: some View {
@@ -89,46 +81,46 @@ struct SearchResultContent: View {
     var humidityView: some View {
         VStack {
             Text("Humidity")
-                .font(.subheadline)
             Text(humidity, format: .percent)
         }
+        .font(.caption)
     }
     
     var uvView: some View {
         VStack {
             Text("UV")
-                .font(.subheadline)
             Text(uv, format: .number.rounded(increment: 0.0))
         }
+        .font(.caption)
     }
     
     var feelsLikeView: some View {
         VStack {
             Text("Feels Like")
-                .font(.subheadline)
-            Text(feelLikeFormatted)
+            Text("\(String(format: "%.0f", floor(feelsLike)))°")
         }
+        .font(.caption)
     }
 }
 
 extension SearchResultContent {
     init(_ model: WeatherModel) {
         imageUrl = model.current.condition.icon
-        city = model.location.name
+        condition = model.current.condition.text
         temp = model.current.tempF
         humidity = model.current.humidity
         uv = model.current.uv
-        feelLike = model.current.feelslikeF
+        feelsLike = model.current.feelslikeF
     }
 }
 
 #Preview {
     SearchResultContent(
         imageUrl: "cloud.sun.bolt",
-        city: "Brooklyn",
+        condition: "Brooklyn",
         temp: 26,
         humidity: 57,
         uv: 0,
-        feelLike: 21
+        feelsLike: 21
     )
 }

@@ -20,6 +20,6 @@ struct WeatherApp: App {
     }
     
     static private func provideRestAPIService() -> RestAPI {
-        return ConcreteRestAPIService().provideRestAPI()
+        ConcreteRestAPIService().provideRestAPI()
     }
 }

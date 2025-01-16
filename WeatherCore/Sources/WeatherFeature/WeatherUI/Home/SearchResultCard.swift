@@ -16,10 +16,7 @@ struct SearchResultCard: View {
         let iconUrl = "https://cdn.weatherapi.com/weather/128x128/day/\(iconName)"
         return URL(string: iconUrl)!
     }
-    private var tempFormatted: String {
-        let measure = Measurement<UnitTemperature>(value: model.current.tempF, unit: .fahrenheit)
-        return measure.formatted()
-    }
+    
     var body: some View {
         VStack {
             Rectangle()
@@ -30,8 +27,8 @@ struct SearchResultCard: View {
                 .overlay {
                     contentView
                         .frame(maxWidth: .infinity)
-                        .padding([.leading, .trailing], 28)
-                        .padding(.top, 16)
+                        .padding([.leading, .trailing], 36)
+                        .padding(.top, 32)
                 }
                 .onTapGesture {
                     withAnimation {
@@ -51,10 +48,10 @@ struct SearchResultCard: View {
                 case .success(let image):
                     image
                         .resizable()
-                        .frame(width: 128, height: 128)
+                        .frame(width: 83, height: 67)
                 default:
                     ProgressView()
-                        .frame(width: 128, height: 128)
+                        .frame(width: 83, height: 67)
                 }
             }
         }
@@ -63,9 +60,9 @@ struct SearchResultCard: View {
     var cityView: some View {
         VStack {
             Text(model.location.name)
-                .font(.title.bold())
-            Text(tempFormatted)
-                .font(.system(size: 48, weight: .bold))
+                .font(.title3.weight(.semibold))
+            Text("\(String(format: "%.0f", floor(model.current.tempF)))°")
+                .font(.system(size: 60, weight: .bold))
         }
     }
 }
