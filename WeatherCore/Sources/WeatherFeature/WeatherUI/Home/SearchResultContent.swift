@@ -22,13 +22,18 @@ struct SearchResultContent: View {
     }
     
     var body: some View {
-        VStack(spacing: 24) {
+        VStack {
             iconView
+                .padding(.bottom, 27)
             conditionView
+                .padding(.bottom, 16)
             temperatureView
+                .padding(.bottom, 36)
             sectionView
+            Spacer()
         }
-        .padding()
+        .padding(.top, 74)
+        .padding([.leading, .trailing], 16)
     }
     
     var iconView: some View {
@@ -52,17 +57,19 @@ struct SearchResultContent: View {
             Image(systemName: "location.fill")
                 .font(.title2)
         }
+        .foregroundStyle(Color(red: 44/255, green: 44/255, blue: 44/255))
         .fontWeight(.semibold)
     }
     
     var temperatureView: some View {
         Text("\(String(format: "%.0f", floor(temp)))°")
+            .foregroundStyle(Color(red: 44/255, green: 44/255, blue: 44/255))
             .font(.system(size: 70).bold())
     }
     
     var sectionView: some View {
         Rectangle()
-            .fill(Color.gray.quaternary)
+            .fill(Color(red: 242/255, green: 242/255, blue: 242/255))
             .cornerRadius(16)
             .frame(height: 75)
             .overlay {
@@ -74,7 +81,7 @@ struct SearchResultContent: View {
                     feelsLikeView
                 }
                 .padding()
-                .foregroundStyle(.gray)
+                .foregroundStyle(Color(red: 196/255, green: 196/255, blue: 196/255))
             }
     }
     

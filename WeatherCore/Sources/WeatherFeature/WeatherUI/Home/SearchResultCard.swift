@@ -20,7 +20,7 @@ struct SearchResultCard: View {
     var body: some View {
         VStack {
             Rectangle()
-                .fill(Color.gray.tertiary)
+                .fill(Color(red: 242/255, green: 242/255, blue: 242/255))
                 .cornerRadius(16)
                 .frame(height: 117)
                 .padding([.leading, .trailing, .top], 16)
@@ -64,5 +64,6 @@ struct SearchResultCard: View {
             Text("\(String(format: "%.0f", floor(model.current.tempF)))°")
                 .font(.system(size: 60, weight: .bold))
         }
+        .foregroundStyle(Color(red: 44/255, green: 44/255, blue: 44/255))
     }
 }

@@ -6,11 +6,12 @@ struct SearchContentUnavailableView: View {
     var body: some View {
         ContentUnavailableView {
             Text(placeholder)
-                .font(.system(size: 40, weight: .semibold))
+                .font(.system(size: 30, weight: .semibold))
+                .foregroundStyle(Color(red: 44/255, green: 44/255, blue: 44/255))
         } description: {
             Text(description)
-                .font(.headline)
-                .foregroundStyle(Color.black)
+                .font(.subheadline)
+                .foregroundColor(Color(red: 44/255, green: 44/255, blue: 44/255))
                 .padding(.top, 8)
         }
     }
