@@ -62,9 +62,16 @@ struct SearchResultContent: View {
     }
     
     var temperatureView: some View {
-        Text("\(String(format: "%.0f", floor(temp)))°")
+        Text("\(String(format: "%.0f", floor(temp)))")
             .foregroundStyle(Color(red: 44/255, green: 44/255, blue: 44/255))
-            .font(.system(size: 70).bold())
+            .font(.system(size: 70).weight(.bold))
+            .overlay(alignment: .topTrailing) {
+                Text("°")
+                    .foregroundStyle(Color(red: 44/255, green: 44/255, blue: 44/255))
+                    .font(.body.weight(.bold))
+                    .padding(.top, 8)
+                    .padding(.trailing, -8)
+            }
     }
     
     var sectionView: some View {

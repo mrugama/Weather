@@ -67,7 +67,7 @@ struct SearchResultCard: View {
                 .font(.system(size: 42, weight: .bold))
                 .overlay(alignment: .topTrailing) {
                     Text("°")
-                        .font(.caption2.weight(.bold))
+                        .font(.footnote.weight(.bold))
                         .padding(.top, 8)
                         .padding(.trailing, -8)
                 }
