@@ -34,7 +34,9 @@ struct SearchResultCard: View {
                         .padding(.top, 16)
                 }
                 .onTapGesture {
-                    appState = .locationDetails(model: model, city: model.location.name)
+                    withAnimation {
+                        appState = .locationDetails(model: model, city: model.location.name)
+                    }
                 }
             Spacer()
         }

@@ -1,4 +1,3 @@
-import Foundation
 import RestAPI
 import SwiftUI
 
@@ -13,7 +12,7 @@ enum WeatherAppState: Equatable {
 @MainActor
 @Observable
 final class SearchViewModel {
-    var weatherIconData: Data?
+    var searchText: String = ""
     let prompt: LocalizedStringKey = "Search Location"
     var appState: WeatherAppState = .noLocationSelected
     
@@ -27,9 +26,11 @@ final class SearchViewModel {
         do {
             return try await restAPI.fetch(city)
         } catch {
-            appState = .somethingWentWrong(
-                error: error.localizedDescription
-            )
+            withAnimation {
+                appState = .somethingWentWrong(
+                    error: error.localizedDescription
+                )
+            }
         }
         return nil
     }
