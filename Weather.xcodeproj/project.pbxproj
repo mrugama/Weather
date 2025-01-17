@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E50FE43C2D38383A005F9984 /* Networking in Frameworks */ = {isa = PBXBuildFile; productRef = E50FE43B2D38383A005F9984 /* Networking */; };
 		E50FE43E2D38383E005F9984 /* RestAPI in Frameworks */ = {isa = PBXBuildFile; productRef = E50FE43D2D38383E005F9984 /* RestAPI */; };
 		E50FE4402D3838D2005F9984 /* WeatherUI in Frameworks */ = {isa = PBXBuildFile; productRef = E50FE43F2D3838D2005F9984 /* WeatherUI */; };
 		E50FE4562D38C1F7005F9984 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E50FE4552D38C1F7005F9984 /* README.md */; };
@@ -47,7 +46,6 @@
 			files = (
 				E50FE4402D3838D2005F9984 /* WeatherUI in Frameworks */,
 				E50FE43E2D38383E005F9984 /* RestAPI in Frameworks */,
-				E50FE43C2D38383A005F9984 /* Networking in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,7 +98,6 @@
 			);
 			name = Weather;
 			packageProductDependencies = (
-				E50FE43B2D38383A005F9984 /* Networking */,
 				E50FE43D2D38383E005F9984 /* RestAPI */,
 				E50FE43F2D3838D2005F9984 /* WeatherUI */,
 			);
@@ -371,10 +368,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E50FE43B2D38383A005F9984 /* Networking */ = {
-			isa = XCSwiftPackageProductDependency;
-			productName = Networking;
-		};
 		E50FE43D2D38383E005F9984 /* RestAPI */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = RestAPI;

@@ -8,14 +8,6 @@ let package = Package(
     platforms: [.iOS(.v17)],
     products: [
         .library(
-            name: "Networking",
-            targets: ["Networking"]
-        ),
-        .library(
-            name: "EndpointManager",
-            targets: ["EndpointManager"]
-        ),
-        .library(
             name: "RestAPI",
             targets: ["RestAPI"]
         ),
