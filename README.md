@@ -1,8 +1,10 @@
 # Weather
+## Video
+https://github.com/user-attachments/assets/2ace9345-f7d8-4342-bac3-80653a3a896c
+## Images
 | No location selected | Searching location | Selected location |
 | ---- | ---- | ---- |
-| <img src="https://github.com/user-attachments/assets/4d12ef91-7914-4686-8f56-f7b3c12c926e" alt="Example Image" width="200"> | <img src="https://github.com/user-attachments/assets/3c3fb908-5a99-4a13-9611-bcba75bb18b9" alt="Example Image" width="200"> | <img src="https://github.com/user-attachments/assets/b511c59f-e025-4cce-85c4-d575c842fb01" alt="Example Image" width="200"> |
-
+| <img src="https://github.com/user-attachments/assets/1886f22b-6af2-4848-ae0a-5397b2062734" alt="Example Image" width="200"> | <img src="https://github.com/user-attachments/assets/607e6557-1569-4865-a2d5-75defbb3f71f" alt="Example Image" width="200"> | <img src="https://github.com/user-attachments/assets/2fda1aa8-21c6-4fc2-95a2-9515c2d7ff4f" alt="Example Image" width="200"> |
 
 ### Steps to Run the App
 1. Clone the Repository
