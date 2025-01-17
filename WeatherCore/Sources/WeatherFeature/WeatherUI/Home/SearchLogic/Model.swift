@@ -29,6 +29,38 @@ struct Current: Decodable, Equatable {
     let feelslikeC: Double
     let feelslikeF: Double
     
+    var tempCFormatted: String {
+        String(format: "%.0f", floor(tempC))
+    }
+    
+    var tempFFormatted: String {
+        String(format: "%.0f", floor(tempF))
+    }
+    
+    var feelsLikeCFormatted: String {
+        String(format: "%.0f", floor(feelslikeC))
+    }
+    
+    var feelsLikeFFormatted: String {
+        String(format: "%.0f", floor(feelslikeF))
+    }
+    
+    var tempSymbol: String {
+        "°"
+    }
+    
+    var humidityLabel: String {
+        "Humidity"
+    }
+    
+    var uvLabel: String {
+        "UV"
+    }
+    
+    var feelsLikeLabel: String {
+        "Feels like"
+    }
+    
     subscript<T>(dynamicMember keyPath: KeyPath<Condition, T>) -> T {
         return condition[keyPath: keyPath]
     }

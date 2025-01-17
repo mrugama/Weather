@@ -8,12 +8,16 @@
 import SwiftUI
 
 struct SearchResultContent: View {
-    var imageURL: URL
-    var condition: String
-    var temp: Double
-    var humidity: Int
-    var uv: Double
-    var feelsLike: Double
+    let imageURL: URL
+    let condition: String
+    let temp: String
+    let humidityLabel: String
+    let humidity: Int
+    let uvLabel: String
+    let uv: Double
+    let feelsLikeLabel: String
+    let feelsLike: String
+    let tempSymbol: String
     
     var body: some View {
         VStack {
@@ -56,11 +60,11 @@ struct SearchResultContent: View {
     }
     
     var temperatureView: some View {
-        Text("\(String(format: "%.0f", floor(temp)))")
+        Text(temp)
             .foregroundStyle(Color(red: 44/255, green: 44/255, blue: 44/255))
             .font(.system(size: 70).weight(.bold))
             .overlay(alignment: .topTrailing) {
-                Text("°")
+                Text(tempSymbol)
                     .foregroundStyle(Color(red: 44/255, green: 44/255, blue: 44/255))
                     .font(.body.weight(.bold))
                     .padding(.top, 8)
@@ -87,7 +91,7 @@ struct SearchResultContent: View {
     
     var humidityView: some View {
         VStack(spacing: 2) {
-            Text("Humidity")
+            Text(humidityLabel)
                 .foregroundStyle(Color(red: 196/255, green: 196/255, blue: 196/255))
                 .font(.caption)
             Text(humidity, format: .percent)
@@ -99,7 +103,7 @@ struct SearchResultContent: View {
     
     var uvView: some View {
         VStack(spacing: 2) {
-            Text("UV")
+            Text(uvLabel)
                 .foregroundStyle(Color(red: 196/255, green: 196/255, blue: 196/255))
                 .font(.caption)
             Text(uv, format: .number.rounded(increment: 0.0))
@@ -111,10 +115,10 @@ struct SearchResultContent: View {
     
     var feelsLikeView: some View {
         VStack(spacing: 2) {
-            Text("Feels Like")
+            Text(feelsLikeLabel)
                 .foregroundStyle(Color(red: 196/255, green: 196/255, blue: 196/255))
                 .font(.caption)
-            Text("\(String(format: "%.0f", floor(feelsLike)))°")
+            Text("\(feelsLike)°")
                 .foregroundStyle(Color(red: 154/255, green: 154/255, blue: 154/255))
                 .font(.subheadline)
         }
@@ -125,10 +129,14 @@ extension SearchResultContent {
     init(_ model: WeatherModel) {
         imageURL = model.icon128x128URL
         condition = model.text
-        temp = model.tempF
+        temp = model.tempFFormatted
+        humidityLabel = model.humidityLabel
         humidity = model.humidity
+        uvLabel = model.uvLabel
         uv = model.uv
-        feelsLike = model.feelslikeF
+        feelsLikeLabel = model.feelsLikeLabel
+        feelsLike = model.feelsLikeCFormatted
+        tempSymbol = model.tempSymbol
     }
 }
 
@@ -136,9 +144,13 @@ extension SearchResultContent {
     SearchResultContent(
         imageURL: URL(string: "https://cdn.weatherapi.com/weather/128x128/day/113.png")!,
         condition: "Brooklyn",
-        temp: 26,
+        temp: "26",
+        humidityLabel: "Humidity",
         humidity: 57,
+        uvLabel: "UV",
         uv: 0,
-        feelsLike: 21
+        feelsLikeLabel: "Feels like",
+        feelsLike: "21",
+        tempSymbol: "°"
     )
 }

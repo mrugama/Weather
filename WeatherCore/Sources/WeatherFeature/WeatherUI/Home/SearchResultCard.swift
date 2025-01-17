@@ -39,7 +39,7 @@ struct SearchResultCard: View {
         HStack {
             cityView
             Spacer()
-            AsyncImage(url: model.icon128x128URL) { pahse in
+            AsyncImage(url: model.icon64x64URL) { pahse in
                 switch pahse {
                 case .success(let image):
                     image
@@ -47,7 +47,6 @@ struct SearchResultCard: View {
                         .frame(width: 83, height: 67)
                 default:
                     ProgressView()
-                        .frame(width: 83, height: 67)
                 }
             }
         }
@@ -57,10 +56,10 @@ struct SearchResultCard: View {
         VStack(alignment: .center, spacing: 13) {
             Text(model.name)
                 .font(.title.weight(.semibold))
-            Text("\(String(format: "%.0f", floor(model.tempF)))")
+            Text(model.tempFFormatted)
                 .font(.system(size: 42, weight: .bold))
                 .overlay(alignment: .topTrailing) {
-                    Text("°")
+                    Text(model.tempSymbol)
                         .font(.footnote.weight(.bold))
                         .padding(.top, 8)
                         .padding(.trailing, -8)
