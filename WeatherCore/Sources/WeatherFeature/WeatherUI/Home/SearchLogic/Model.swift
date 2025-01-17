@@ -1,44 +1,54 @@
 import Foundation
 
+@dynamicMemberLookup
 struct WeatherModel: Decodable, Equatable {
     let location: Location
     let current: Current
+    
+    subscript<T>(dynamicMember keyPath: KeyPath<Location, T>) -> T {
+        return location[keyPath: keyPath]
+    }
+    
+    subscript<T>(dynamicMember keyPath: KeyPath<Current, T>) -> T {
+        return current[keyPath: keyPath]
+    }
 }
 
 struct Location: Decodable, Equatable {
     let name: String
-    let region: String
     let country: String
-    let lat: Double
-    let lon: Double
-    let tzId: String
-    let localtimeEpoch: Int
-    let localtime: String
 }
 
+@dynamicMemberLookup
 struct Current: Decodable, Equatable {
-    let lastUpdatedEpoch: Int
-    let lastUpdated: String
     let tempC: Double
     let tempF: Double
-    let isDay: Int
     let condition: Condition
-    let windMph: Double
-    let windKph: Double
-    let windDegree: Int
-    let windDir: String
-    let pressureMb: Double
-    let pressureIn: Double
-    let precipMm: Double
-    let precipIn: Double
     let humidity: Int
     let uv: Double
     let feelslikeC: Double
     let feelslikeF: Double
+    
+    subscript<T>(dynamicMember keyPath: KeyPath<Condition, T>) -> T {
+        return condition[keyPath: keyPath]
+    }
 }
 
 struct Condition: Decodable, Equatable {
     let text: String
     let icon: String
     let code: Int
+    
+    var icon128x128URL: URL {
+        URL(string: iconSizeUrlStr(128))!
+    }
+    
+    var icon64x64URL: URL {
+        URL(string: iconSizeUrlStr(64))!
+    }
+    
+    private func iconSizeUrlStr(_ size: Int) -> String {
+        let iconName = String(icon.split(separator: "/").last ?? "113.png")
+        return "https://cdn.weatherapi.com/weather/\(size)x\(size)/day/\(iconName)"
+    }
 }

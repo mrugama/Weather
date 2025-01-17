@@ -8,18 +8,12 @@
 import SwiftUI
 
 struct SearchResultContent: View {
-    var imageUrl: String
+    var imageURL: URL
     var condition: String
     var temp: Double
     var humidity: Int
     var uv: Double
     var feelsLike: Double
-    
-    private var imageURL: URL {
-        let iconName = String(imageUrl.split(separator: "/").last ?? "")
-        let iconUrl = "https://cdn.weatherapi.com/weather/128x128/day/\(iconName)"
-        return URL(string: iconUrl)!
-    }
     
     var body: some View {
         VStack {
@@ -129,18 +123,18 @@ struct SearchResultContent: View {
 
 extension SearchResultContent {
     init(_ model: WeatherModel) {
-        imageUrl = model.current.condition.icon
-        condition = model.current.condition.text
-        temp = model.current.tempF
-        humidity = model.current.humidity
-        uv = model.current.uv
-        feelsLike = model.current.feelslikeF
+        imageURL = model.icon128x128URL
+        condition = model.text
+        temp = model.tempF
+        humidity = model.humidity
+        uv = model.uv
+        feelsLike = model.feelslikeF
     }
 }
 
 #Preview {
     SearchResultContent(
-        imageUrl: "cloud.sun.bolt",
+        imageURL: URL(string: "https://cdn.weatherapi.com/weather/128x128/day/113.png")!,
         condition: "Brooklyn",
         temp: 26,
         humidity: 57,

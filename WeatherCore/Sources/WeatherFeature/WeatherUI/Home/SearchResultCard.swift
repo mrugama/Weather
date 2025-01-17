@@ -11,12 +11,6 @@ struct SearchResultCard: View {
     var model: WeatherModel
     @Binding var appState: WeatherAppState
     
-    private var imageURL: URL {
-        let iconName = String(model.current.condition.icon.split(separator: "/").last ?? "")
-        let iconUrl = "https://cdn.weatherapi.com/weather/128x128/day/\(iconName)"
-        return URL(string: iconUrl)!
-    }
-    
     var body: some View {
         VStack {
             contentView
@@ -45,7 +39,7 @@ struct SearchResultCard: View {
         HStack {
             cityView
             Spacer()
-            AsyncImage(url: imageURL) { pahse in
+            AsyncImage(url: model.icon128x128URL) { pahse in
                 switch pahse {
                 case .success(let image):
                     image
@@ -61,9 +55,9 @@ struct SearchResultCard: View {
     
     var cityView: some View {
         VStack(alignment: .center, spacing: 13) {
-            Text(model.location.name)
+            Text(model.name)
                 .font(.title.weight(.semibold))
-            Text("\(String(format: "%.0f", floor(model.current.tempF)))")
+            Text("\(String(format: "%.0f", floor(model.tempF)))")
                 .font(.system(size: 42, weight: .bold))
                 .overlay(alignment: .topTrailing) {
                     Text("°")
@@ -74,4 +68,8 @@ struct SearchResultCard: View {
         }
         .foregroundStyle(Color(red: 44/255, green: 44/255, blue: 44/255))
     }
+}
+
+extension WeatherAppState {
+    
 }
