@@ -4,7 +4,7 @@
 //
 //  Created by Marlon Rugama on 1/15/25.
 //
-
+import DecoratorUI
 import SwiftUI
 
 struct SearchResultContent: View {
@@ -22,16 +22,16 @@ struct SearchResultContent: View {
     var body: some View {
         VStack {
             iconView
-                .padding(.bottom, 27)
+                .padding(.bottom, .x28)
             conditionView
-                .padding(.bottom, 16)
+                .padding(.bottom, .x16)
             temperatureView
-                .padding(.bottom, 36)
+                .padding(.bottom, .x36)
             sectionView
             Spacer()
         }
-        .padding(.top, 74)
-        .padding([.leading, .trailing], 16)
+        .padding(.top, .x72)
+        .padding([.leading, .trailing], .x16)
     }
     
     var iconView: some View {
@@ -40,10 +40,9 @@ struct SearchResultContent: View {
             case .success(let image):
                 image
                     .resizable()
-                    .frame(width: 124, height: 124)
+                    .frame(width: .x124, height: .x124)
             default:
                 ProgressView()
-                    .frame(width: 124, height: 124)
             }
         }
     }
@@ -55,28 +54,28 @@ struct SearchResultContent: View {
             Image(systemName: "location.fill")
                 .font(.title2)
         }
-        .foregroundStyle(Color(red: 44/255, green: 44/255, blue: 44/255))
+        .foregroundStyle(Color.darkGrayishBlack)
         .fontWeight(.semibold)
     }
     
     var temperatureView: some View {
         Text(temp)
-            .foregroundStyle(Color(red: 44/255, green: 44/255, blue: 44/255))
-            .font(.system(size: 70).weight(.bold))
+            .foregroundStyle(Color.darkGrayishBlack)
+            .font(.system(size: .x72).weight(.bold))
             .overlay(alignment: .topTrailing) {
                 Text(tempSymbol)
-                    .foregroundStyle(Color(red: 44/255, green: 44/255, blue: 44/255))
+                    .foregroundStyle(Color.darkGrayishBlack)
                     .font(.body.weight(.bold))
-                    .padding(.top, 8)
-                    .padding(.trailing, -8)
+                    .padding(.top, .x8)
+                    .padding(.trailing, -.x8)
             }
     }
     
     var sectionView: some View {
         Rectangle()
-            .fill(Color(red: 242/255, green: 242/255, blue: 242/255))
-            .cornerRadius(16)
-            .frame(height: 75)
+            .fill(Color.veryLightGray)
+            .cornerRadius(.x16)
+            .frame(height: .x72)
             .overlay {
                 HStack {
                     humidityView
@@ -90,36 +89,36 @@ struct SearchResultContent: View {
     }
     
     var humidityView: some View {
-        VStack(spacing: 2) {
+        VStack(spacing: .x2) {
             Text(humidityLabel)
-                .foregroundStyle(Color(red: 196/255, green: 196/255, blue: 196/255))
+                .foregroundStyle(Color.lightGray)
                 .font(.caption)
             Text(humidity, format: .percent)
-                .foregroundStyle(Color(red: 154/255, green: 154/255, blue: 154/255))
+                .foregroundStyle(Color.mediumGray)
                 .font(.subheadline)
         }
         .font(.caption)
     }
     
     var uvView: some View {
-        VStack(spacing: 2) {
+        VStack(spacing: .x2) {
             Text(uvLabel)
-                .foregroundStyle(Color(red: 196/255, green: 196/255, blue: 196/255))
+                .foregroundStyle(Color.lightGray)
                 .font(.caption)
             Text(uv, format: .number.rounded(increment: 0.0))
-                .foregroundStyle(Color(red: 154/255, green: 154/255, blue: 154/255))
+                .foregroundStyle(Color.mediumGray)
                 .font(.subheadline)
         }
         .font(.caption)
     }
     
     var feelsLikeView: some View {
-        VStack(spacing: 2) {
+        VStack(spacing: .x2) {
             Text(feelsLikeLabel)
-                .foregroundStyle(Color(red: 196/255, green: 196/255, blue: 196/255))
+                .foregroundStyle(Color.lightGray)
                 .font(.caption)
             Text("\(feelsLike)°")
-                .foregroundStyle(Color(red: 154/255, green: 154/255, blue: 154/255))
+                .foregroundStyle(Color.mediumGray)
                 .font(.subheadline)
         }
     }

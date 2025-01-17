@@ -5,6 +5,7 @@
 //  Created by Marlon Rugama on 1/15/25.
 //
 
+import DecoratorUI
 import SwiftUI
 
 struct SearchResultCard: View {
@@ -14,15 +15,15 @@ struct SearchResultCard: View {
     var body: some View {
         VStack {
             contentView
-                .frame(height: 117)
-                .padding(.top, 48)
-                .padding([.leading, .trailing], 48)
+                .frame(height: .x116)
+                .padding(.top, .x48)
+                .padding([.leading, .trailing], .x48)
                 .background(
                     Rectangle()
-                        .fill(Color(red: 242/255, green: 242/255, blue: 242/255))
-                        .cornerRadius(16)
-                        .padding(.top, 32)
-                        .padding([.leading, .trailing], 16)
+                        .fill(Color.veryLightGray)
+                        .cornerRadius(.x16)
+                        .padding(.top, .x32)
+                        .padding([.leading, .trailing], .x16)
                         .overlay {
                         }
                         .onTapGesture {
@@ -44,7 +45,7 @@ struct SearchResultCard: View {
                 case .success(let image):
                     image
                         .resizable()
-                        .frame(width: 83, height: 67)
+                        .frame(width: .x82, height: .x68)
                 default:
                     ProgressView()
                 }
@@ -53,22 +54,18 @@ struct SearchResultCard: View {
     }
     
     var cityView: some View {
-        VStack(alignment: .center, spacing: 13) {
+        VStack(alignment: .center, spacing: .x14) {
             Text(model.name)
                 .font(.title.weight(.semibold))
             Text(model.tempFFormatted)
-                .font(.system(size: 42, weight: .bold))
+                .font(.system(size: .x42, weight: .bold))
                 .overlay(alignment: .topTrailing) {
                     Text(model.tempSymbol)
                         .font(.footnote.weight(.bold))
-                        .padding(.top, 8)
-                        .padding(.trailing, -8)
+                        .padding(.top, .x8)
+                        .padding(.trailing, -.x8)
                 }
         }
-        .foregroundStyle(Color(red: 44/255, green: 44/255, blue: 44/255))
+        .foregroundStyle(Color.darkGrayishBlack)
     }
-}
-
-extension WeatherAppState {
-    
 }

@@ -38,8 +38,12 @@ let package = Package(
         ),
         .target(
             name: "WeatherUI",
-            dependencies: ["RestAPI"],
+            dependencies: ["RestAPI", "DecoratorUI"],
             path: "Sources/WeatherFeature/WeatherUI"
+        ),
+        .target(
+            name: "DecoratorUI",
+            path: "Sources/WeatherFeature/DecoratorUI"
         ),
         .testTarget(
             name: "WeatherCoreTests",
