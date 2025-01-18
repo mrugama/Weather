@@ -20,11 +20,18 @@ struct HomePage: View {
                     Text("Serching city: \(city)")
                 }
             case .locationSelected(let model):
-                SearchResultCard(model: model, appState: $viewModel.appState)
+                SearchResultCard(
+                    model: model,
+                    appState: $viewModel.appState
+                )
             case .locationDetails(let model, _):
                 SearchResultContent(model)
             case .somethingWentWrong(let error):
-                ContentUnavailableView(error, image: "exclamationmark.triangle.fill")
+                ContentUnavailableView(
+                    "Something went wrong",
+                    image: "exclamationmark.triangle.fill",
+                    description: Text(error)
+                )
             }
         }
         .task {
