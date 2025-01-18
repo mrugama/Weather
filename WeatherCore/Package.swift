@@ -38,16 +38,51 @@ let package = Package(
             path: "Sources/WeatherFeature/DecoratorUI"
         ),
         
+        // MARK: - Shared Test Utilities Target
+        .target(
+            name: "NetworkingTestUtilities",
+            path: "Sources/Foundation/NetworkingTestUtilities"
+        ),
+        .target(
+            name: "EndpointManagerTestUtilities",
+            path: "Sources/Foundation/EndpointManagerTestUtilities"
+        ),
+        .target(
+            name: "RestAPITestUtilities",
+            path: "Sources/WeatherFeature/RestAPITestUtilities"
+        ),
+        .target(
+            name: "CommonTestUtilities",
+            path: "Sources/CommonTestUtilities"
+        ),
+        
         // MARK: Testing Target definition
         .testTarget(
             name: "NetworkingTests",
-            dependencies: ["Networking"],
+            dependencies: [
+                "Networking",
+                "NetworkingTestUtilities",
+            ],
             path: "Sources/Foundation/NetworkingTests"
         ),
         .testTarget(
             name: "EndpointManagerTests",
-            dependencies: ["EndpointManager"],
+            dependencies: [
+                "EndpointManager",
+                "EndpointManagerTestUtilities",
+            ],
             path: "Sources/Foundation/EndpointManagerTests"
+        ),
+        .testTarget(
+            name: "RestAPITests",
+            dependencies: [
+                "RestAPI",
+                "RestAPITestUtilities",
+                "EndpointManagerTestUtilities",
+                "NetworkingTestUtilities",
+                "CommonTestUtilities",
+            ],
+            path: "Sources/WeatherFeature/RestAPITests"
         ),
     ]
 )
