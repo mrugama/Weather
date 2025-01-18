@@ -40,10 +40,6 @@ let package = Package(
         
         // MARK: Testing Target definition
         .testTarget(
-            name: "WeatherCoreTests",
-            dependencies: ["EndpointManager"]
-        ),
-        .testTarget(
             name: "NetworkingTests",
             dependencies: ["Networking"],
             path: "Sources/Foundation/NetworkingTests"
