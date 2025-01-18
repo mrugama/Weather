@@ -37,9 +37,21 @@ let package = Package(
             name: "DecoratorUI",
             path: "Sources/WeatherFeature/DecoratorUI"
         ),
+        
+        // MARK: Testing Target definition
         .testTarget(
             name: "WeatherCoreTests",
-            dependencies: ["RestAPI"]
+            dependencies: ["EndpointManager"]
+        ),
+        .testTarget(
+            name: "NetworkingTests",
+            dependencies: ["Networking"],
+            path: "Sources/Foundation/NetworkingTests"
+        ),
+        .testTarget(
+            name: "EndpointManagerTests",
+            dependencies: ["EndpointManager"],
+            path: "Sources/Foundation/EndpointManagerTests"
         ),
     ]
 )
