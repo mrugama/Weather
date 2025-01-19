@@ -35,5 +35,7 @@ public func provideWeatherModel<T: Decodable>() -> T {
     let url = Bundle.module.url(forResource: "weather", withExtension: "json")!
 
     let data = try! Data(contentsOf: url)
-    return try! JSONDecoder().decode(T.self, from: data)
+    let decoder = JSONDecoder()
+    decoder.keyDecodingStrategy = .convertFromSnakeCase
+    return try! decoder.decode(T.self, from: data)
 }
