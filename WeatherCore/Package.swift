@@ -30,7 +30,7 @@ let package = Package(
         ),
         .target(
             name: "WeatherUI",
-            dependencies: ["RestAPI", "DecoratorUI"],
+            dependencies: ["RestAPI", "DecoratorUI", "RestAPITestUtilities", "NetworkingTestUtilities"],
             path: "Sources/WeatherFeature/WeatherUI"
         ),
         .target(
@@ -49,7 +49,12 @@ let package = Package(
         ),
         .target(
             name: "RestAPITestUtilities",
-            path: "Sources/WeatherFeature/RestAPITestUtilities"
+            path: "Sources/WeatherFeature/RestAPITestUtilities",
+            resources: [.copy("data/weather.json")]
+        ),
+        .target(
+            name: "WeatherUITestUtilities",
+            path: "Sources/WeatherFeature/WeatherUITestUtilities"
         ),
         .target(
             name: "CommonTestUtilities",
@@ -83,6 +88,15 @@ let package = Package(
                 "CommonTestUtilities",
             ],
             path: "Sources/WeatherFeature/RestAPITests"
+        ),
+        .testTarget(
+            name: "WeatherUITests",
+            dependencies: [
+                "WeatherUI",
+                "WeatherUITestUtilities",
+                "RestAPITestUtilities",
+            ],
+            path: "Sources/WeatherFeature/WeatherUITests"
         ),
     ]
 )
