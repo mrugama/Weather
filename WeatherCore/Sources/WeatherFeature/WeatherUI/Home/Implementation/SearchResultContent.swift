@@ -140,17 +140,10 @@ extension SearchResultContent {
     }
 }
 
+#if DEBUG
+import RestAPITestUtilities
+#endif
+
 #Preview(traits: .sizeThatFitsLayout) {
-    SearchResultContent(
-        imageURL: URL(string: "https://cdn.weatherapi.com/weather/128x128/day/113.png")!,
-        condition: "Brooklyn",
-        temp: "26",
-        humidityLabel: "Humidity",
-        humidity: 57,
-        uvLabel: "UV",
-        uv: 0,
-        feelsLikeLabel: "Feels like",
-        feelsLike: "21",
-        tempSymbol: "°"
-    )
+    SearchResultContent(provideWeatherModel())
 }
