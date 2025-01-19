@@ -4,9 +4,11 @@ https://github.com/user-attachments/assets/2ace9345-f7d8-4342-bac3-80653a3a896c
 ## Images
 | No location selected | Searching location | Selected location |
 | ---- | ---- | ---- |
-| <img src="https://github.com/user-attachments/assets/1886f22b-6af2-4848-ae0a-5397b2062734" alt="Example Image" width="200"> | <img src="https://github.com/user-attachments/assets/607e6557-1569-4865-a2d5-75defbb3f71f" alt="Example Image" width="200"> | <img src="https://github.com/user-attachments/assets/2fda1aa8-21c6-4fc2-95a2-9515c2d7ff4f" alt="Example Image" width="200"> |
+| <img src="https://github.com/user-attachments/assets/1886f22b-6af2-4848-ae0a-5397b2062734" alt="Example Image" width="200"> | <img src="https://github.com/user-attachments/assets/999f24bf-ba3d-42ae-bd42-c78c7a99db2b" alt="Search result" width="200"> | <img src="https://github.com/user-attachments/assets/64ee423d-c2ac-4350-bc55-32859d5e9860" alt="Landing page" width="200"> |
 
 ### Steps to Run the App
+
+
 1. Clone the Repository
     - Run the following command in your terminal:
     ```
