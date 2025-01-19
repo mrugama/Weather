@@ -17,6 +17,7 @@ public extension CGFloat {
     static let x36: CGFloat = 36.0
     static let x42: CGFloat = 42.0
     static let x48: CGFloat = 48.0
+    static let x56: CGFloat = 56.0
     static let x64: CGFloat = 64.0
     static let x68: CGFloat = 68.0
     static let x72: CGFloat = 72.0

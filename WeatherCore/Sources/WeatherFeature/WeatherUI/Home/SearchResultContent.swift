@@ -20,13 +20,12 @@ struct SearchResultContent: View {
     let tempSymbol: String
     
     var body: some View {
-        VStack {
-            iconView
-                .padding(.bottom, .x28)
-            conditionView
-                .padding(.bottom, .x16)
-            temperatureView
-                .padding(.bottom, .x36)
+        VStack(spacing: .x36) {
+            VStack(spacing: .x24) {
+                iconView
+                conditionView
+                temperatureView
+            }
             sectionView
             Spacer()
         }
@@ -53,7 +52,7 @@ struct SearchResultContent: View {
             Text(condition)
                 .font(.title)
             Image(systemName: "location.fill")
-                .font(.title2)
+                .font(.title3)
         }
         .foregroundStyle(Color.darkGrayishBlack)
         .fontWeight(.semibold)
@@ -62,25 +61,23 @@ struct SearchResultContent: View {
     var temperatureView: some View {
         Text(temp)
             .foregroundStyle(Color.darkGrayishBlack)
-            .font(.system(size: .x72).weight(.bold))
+            .font(.system(size: .x72).weight(.semibold))
             .overlay(alignment: .topTrailing) {
                 Text(tempSymbol)
                     .foregroundStyle(Color.darkGrayishBlack)
-                    .font(.body.weight(.bold))
+                    .font(.body.weight(.semibold))
                     .padding(.top, .x8)
                     .padding(.trailing, -.x8)
             }
     }
     
     var sectionView: some View {
-        HStack {
+        HStack(spacing: .x56) {
             humidityView
-            Spacer()
             uvView
-            Spacer()
             feelsLikeView
         }
-        .padding()
+        .padding(.x16)
         .background(
             Color.veryLightGray,
             in: RoundedRectangle(
