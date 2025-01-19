@@ -5,6 +5,7 @@ import CommonTestUtilities
 import RestAPITestUtilities
 import EndpointManagerTestUtilities
 import NetworkingTestUtilities
+import Model
 
 @Suite("RestAPI Tests")
 struct RestAPITests {
@@ -25,7 +26,7 @@ struct RestAPITests {
         let restAPI = MockRestAPI(mockDataLoader)
         
         // When
-        let city: MockWeatherModel = try await restAPI.fetch("Manhattan")
+        let city: WeatherModel = try await restAPI.fetch("Manhattan")
         
         // Then
         #expect(city.location.name == "Manhattan")

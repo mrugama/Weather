@@ -7,6 +7,7 @@ let package = Package(
     name: "WeatherCore",
     platforms: [.iOS(.v17)],
     products: [
+        // MARK: - Feature components
         .library(
             name: "RestAPI",
             targets: ["RestAPI"]
@@ -17,6 +18,7 @@ let package = Package(
         ),
     ],
     targets: [
+        // MARK: - Components
         .target(
             name: "Networking",
             path: "Sources/Foundation/Networking"),
@@ -30,15 +32,19 @@ let package = Package(
         ),
         .target(
             name: "WeatherUI",
-            dependencies: ["RestAPI", "DecoratorUI", "RestAPITestUtilities", "NetworkingTestUtilities"],
+            dependencies: ["RestAPI", "DecoratorUI", "Model", "RestAPITestUtilities", "NetworkingTestUtilities"],
             path: "Sources/WeatherFeature/WeatherUI"
         ),
         .target(
             name: "DecoratorUI",
             path: "Sources/WeatherFeature/DecoratorUI"
         ),
+        .target(
+            name: "Model",
+            path: "Sources/WeatherFeature/Model"
+        ),
         
-        // MARK: - Shared Test Utilities Target
+        // MARK: - Shared Test Utilities Targets
         .target(
             name: "NetworkingTestUtilities",
             path: "Sources/Foundation/NetworkingTestUtilities"
@@ -55,10 +61,6 @@ let package = Package(
         .target(
             name: "WeatherUITestUtilities",
             path: "Sources/WeatherFeature/WeatherUITestUtilities"
-        ),
-        .target(
-            name: "CommonTestUtilities",
-            path: "Sources/CommonTestUtilities"
         ),
         
         // MARK: Testing Target definition
@@ -85,7 +87,7 @@ let package = Package(
                 "RestAPITestUtilities",
                 "EndpointManagerTestUtilities",
                 "NetworkingTestUtilities",
-                "CommonTestUtilities",
+                "Model",
             ],
             path: "Sources/WeatherFeature/RestAPITests"
         ),
