@@ -57,7 +57,7 @@ struct SearchResultCard: View {
             Text(model.name)
                 .font(.title.weight(.semibold))
             Text(model.tempFFormatted)
-                .font(.system(size: .x42, weight: .bold))
+                .font(.system(size: .x60, weight: .semibold))
                 .overlay(alignment: .topTrailing) {
                     Text(model.tempSymbol)
                         .font(.footnote.weight(.bold))
