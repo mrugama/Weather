@@ -15,25 +15,9 @@ struct SearchResultCard: View {
     var body: some View {
         VStack {
             contentView
-                .frame(height: .x116)
-                .padding(.top, .x48)
-                .padding([.leading, .trailing], .x48)
-                .background(
-                    Rectangle()
-                        .fill(Color.veryLightGray)
-                        .cornerRadius(.x16)
-                        .padding(.top, .x32)
-                        .padding([.leading, .trailing], .x16)
-                        .overlay {
-                        }
-                        .onTapGesture {
-                            withAnimation {
-                                appState = .locationDetails(model: model, city: model.location.name)
-                            }
-                        }
-                )
             Spacer()
         }
+        .padding(.x20)
     }
     
     var contentView: some View {
@@ -45,10 +29,25 @@ struct SearchResultCard: View {
                 case .success(let image):
                     image
                         .resizable()
+                        .scaledToFill()
                         .frame(width: .x82, height: .x68)
                 default:
                     ProgressView()
                 }
+            }
+        }
+        .padding([.leading, .trailing], .x32)
+        .padding([.top, .bottom], .x16)
+        .background(
+            Color.veryLightGray,
+            in: RoundedRectangle(
+                cornerRadius: .x16,
+                style: .continuous
+            )
+        )
+        .onTapGesture {
+            withAnimation {
+                appState = .locationDetails(model: model, city: model.location.name)
             }
         }
     }

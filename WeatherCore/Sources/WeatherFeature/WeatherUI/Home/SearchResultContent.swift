@@ -40,6 +40,7 @@ struct SearchResultContent: View {
             case .success(let image):
                 image
                     .resizable()
+                    .scaledToFill()
                     .frame(width: .x124, height: .x124)
             default:
                 ProgressView()
@@ -72,20 +73,21 @@ struct SearchResultContent: View {
     }
     
     var sectionView: some View {
-        Rectangle()
-            .fill(Color.veryLightGray)
-            .cornerRadius(.x16)
-            .frame(height: .x72)
-            .overlay {
-                HStack {
-                    humidityView
-                    Spacer()
-                    uvView
-                    Spacer()
-                    feelsLikeView
-                }
-                .padding()
-            }
+        HStack {
+            humidityView
+            Spacer()
+            uvView
+            Spacer()
+            feelsLikeView
+        }
+        .padding()
+        .background(
+            Color.veryLightGray,
+            in: RoundedRectangle(
+                cornerRadius: .x16,
+                style: .continuous
+            )
+        )
     }
     
     var humidityView: some View {
