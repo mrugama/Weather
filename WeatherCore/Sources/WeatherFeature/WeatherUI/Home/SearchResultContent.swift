@@ -72,7 +72,7 @@ struct SearchResultContent: View {
     }
     
     var sectionView: some View {
-        HStack(spacing: .x56) {
+        HStack(alignment: .top, spacing: .x56) {
             humidityView
             uvView
             feelsLikeView

@@ -68,3 +68,28 @@ struct SearchResultCard: View {
         .foregroundStyle(Color.darkGrayishBlack)
     }
 }
+
+#Preview {
+    SearchResultCard(
+        model: .init(
+            location: .init(
+                name: "Brooklyn",
+                country: "United States"
+            ),
+            current: .init(
+                tempC: 9,
+                tempF: 40,
+                condition: .init(
+                    text: "Sunny",
+                    icon: "//cdn.weatherapi.com/weather/128x128/day/113.png",
+                    code: 200
+                ),
+                humidity: 5,
+                uv: 4,
+                feelslikeC: 0,
+                feelslikeF: 35
+            )
+        ),
+        appState: .constant(.noLocationSelected)
+    )
+}
