@@ -19,23 +19,17 @@ struct RestAPITests {
     @Test("Fetch City Successfully")
     func fetchCitySuccessfully() async throws {
         // Given
-        let cityJSON = """
-                {
-                    "name": "New York",
-                    "population": 8000000
-                }
-                """
-        let cityData = Data(cityJSON.utf8)
-        mockDataLoader.dataToReturn = cityData
+        let weatherData = provideWeatherData()
+        mockDataLoader.dataToReturn = weatherData
         
         let restAPI = MockRestAPI(mockDataLoader)
         
         // When
-        let city: City = try await restAPI.fetch("NewYork")
+        let city: MockWeatherModel = try await restAPI.fetch("Manhattan")
         
         // Then
-        #expect(city.name == "New York")
-        #expect(city.population == 8000000)
+        #expect(city.location.name == "Manhattan")
+        #expect(city.current.condition.text == "Clear")
     }
     
     @Test("Fetch City Failure")
@@ -78,6 +72,7 @@ struct RestAPITests {
         
         do {
             _ = try await restAPI.fetchAsset(icon: "icon123")
+            Issue.record("Expected error to be thrown.")
         } catch {
             #expect(error is URLError)
             #expect(error as! URLError == URLError(.badServerResponse))

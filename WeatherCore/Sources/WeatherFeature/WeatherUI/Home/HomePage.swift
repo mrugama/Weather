@@ -20,10 +20,12 @@ struct HomePage: View {
                     Text("Serching city: \(city)")
                 }
             case .locationSelected(let model):
-                SearchResultCard(
-                    model: model,
-                    appState: $viewModel.appState
-                )
+                HStack(alignment: .top) {
+                    SearchResultCard(
+                        model: model,
+                        appState: $viewModel.appState
+                    )
+                }
             case .locationDetails(let model, _):
                 SearchResultContent(model)
             case .somethingWentWrong(let error):
@@ -63,4 +65,17 @@ struct HomePage: View {
     init(viewModel: SearchViewModel) {
         self.viewModel = viewModel
     }
+}
+
+#if DEBUG
+import NetworkingTestUtilities
+import RestAPITestUtilities
+#endif
+#Preview(traits: .sizeThatFitsLayout) {
+    let mockDataLoader = MockDataLoader()
+    mockDataLoader.dataToReturn = provideWeatherData()
+    mockDataLoader.errorToThrow = URLError(.badURL)
+    let vm = SearchViewModelImpl(MockRestAPI(mockDataLoader))
+    vm.appState = .searchingLocationBy(city: "Manhattan")
+    return HomePage(viewModel: vm)
 }

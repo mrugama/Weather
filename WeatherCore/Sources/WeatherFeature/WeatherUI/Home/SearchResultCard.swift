@@ -13,11 +13,8 @@ struct SearchResultCard: View {
     @Binding var appState: WeatherAppState
     
     var body: some View {
-        VStack {
-            contentView
-            Spacer()
-        }
-        .padding(.x20)
+        contentView
+            .padding(.x20)
     }
     
     var contentView: some View {
@@ -69,7 +66,7 @@ struct SearchResultCard: View {
     }
 }
 
-#Preview {
+#Preview(traits: .sizeThatFitsLayout) {
     SearchResultCard(
         model: .init(
             location: .init(
@@ -85,9 +82,9 @@ struct SearchResultCard: View {
                     code: 200
                 ),
                 humidity: 5,
-                uv: 4,
                 feelslikeC: 0,
-                feelslikeF: 35
+                feelslikeF: 35,
+                uv: 4
             )
         ),
         appState: .constant(.noLocationSelected)

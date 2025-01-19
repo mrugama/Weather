@@ -17,6 +17,6 @@ struct SearchContentUnavailableView: View {
     }
 }
 
-#Preview {
+#Preview(traits: .sizeThatFitsLayout) {
     SearchContentUnavailableView()
 }

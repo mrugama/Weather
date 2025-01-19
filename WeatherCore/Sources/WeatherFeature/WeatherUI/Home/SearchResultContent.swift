@@ -20,17 +20,18 @@ struct SearchResultContent: View {
     let tempSymbol: String
     
     var body: some View {
-        VStack(spacing: .x36) {
-            VStack(spacing: .x24) {
-                iconView
-                conditionView
-                temperatureView
+        HStack(alignment: .top) {
+            VStack(spacing: .x36) {
+                VStack(spacing: .x24) {
+                    iconView
+                    conditionView
+                    temperatureView
+                }
+                sectionView
             }
-            sectionView
-            Spacer()
         }
-        .padding(.top, .x72)
-        .padding([.leading, .trailing], .x16)
+        .padding(.x16)
+        .padding(.top, .x56)
     }
     
     var iconView: some View {
@@ -138,7 +139,7 @@ extension SearchResultContent {
     }
 }
 
-#Preview {
+#Preview(traits: .sizeThatFitsLayout) {
     SearchResultContent(
         imageURL: URL(string: "https://cdn.weatherapi.com/weather/128x128/day/113.png")!,
         condition: "Brooklyn",

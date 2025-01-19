@@ -1,0 +1,47 @@
+{
+    "location": {
+        "name": "Manhattan",
+        "region": "Kansas",
+        "country": "United States of America",
+        "lat": 39.1836,
+        "lon": -96.5714,
+        "tz_id": "America/Chicago",
+        "localtime_epoch": 1736986712,
+        "localtime": "2025-01-15 18:18"
+    },
+    "current": {
+        "last_updated_epoch": 1736986500,
+        "last_updated": "2025-01-15 18:15",
+        "temp_c": -3.9,
+        "temp_f": 25.0,
+        "is_day": 0,
+        "condition": {
+            "text": "Clear",
+            "icon": "//cdn.weatherapi.com/weather/64x64/night/113.png",
+            "code": 1000
+        },
+        "wind_mph": 8.7,
+        "wind_kph": 14.0,
+        "wind_degree": 232,
+        "wind_dir": "SW",
+        "pressure_mb": 1025.0,
+        "pressure_in": 30.27,
+        "precip_mm": 0.0,
+        "precip_in": 0.0,
+        "humidity": 71,
+        "cloud": 0,
+        "feelslike_c": -9.0,
+        "feelslike_f": 15.8,
+        "windchill_c": -7.8,
+        "windchill_f": 17.9,
+        "heatindex_c": -2.9,
+        "heatindex_f": 26.8,
+        "dewpoint_c": -2.7,
+        "dewpoint_f": 27.1,
+        "vis_km": 16.0,
+        "vis_miles": 9.0,
+        "uv": 0.0,
+        "gust_mph": 18.1,
+        "gust_kph": 29.2
+    }
+}
