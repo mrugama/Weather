@@ -115,7 +115,7 @@ struct SearchResultContent: View {
         VStack(spacing: .x2) {
             Text(feelsLikeLabel)
                 .foregroundStyle(Color.lightGray)
-                .font(.caption)
+                .font(.caption2)
             Text("\(feelsLike)°")
                 .foregroundStyle(Color.mediumGray)
                 .font(.subheadline)
