@@ -1,18 +1,16 @@
 import Foundation
+import Model
+import NetworkingTestUtilities
+import RestAPITestUtilities
 import Testing
 @testable import WeatherUI
-import RestAPI
-import RestAPITestUtilities
-import Model
 import WeatherUITestUtilities
-import Networking
-import NetworkingTestUtilities
 
 @Suite("Weather ViewModel")
 @MainActor
 struct WeatherViewModelTests {
     let viewModel: SearchViewModel
-    let restAPI: RestAPI
+    let restAPI: MockRestAPI
     let dataLoader: MockDataLoader
     
     init() {
@@ -31,7 +29,7 @@ struct WeatherViewModelTests {
     @Test("Fetch from online successfully")
     func fetchFromOnlineSuccessfully() async throws {
         // Given
-        dataLoader.dataToReturn = provideWeatherData()
+        dataLoader.dataToReturn = provideMockWeatherData()
         // When
         let model = await viewModel.fetchWeatherData(from: "Manhattan")
         

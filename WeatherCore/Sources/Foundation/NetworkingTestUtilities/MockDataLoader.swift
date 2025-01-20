@@ -1,3 +1,4 @@
+#if DEBUG
 import Foundation
 import Networking
 
@@ -15,3 +16,4 @@ public final class MockDataLoader: DataLoader, @unchecked Sendable {
         return dataToReturn ?? Data()
     }
 }
+#endif

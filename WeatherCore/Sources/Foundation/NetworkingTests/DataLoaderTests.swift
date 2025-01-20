@@ -1,7 +1,7 @@
 import Foundation
-import Testing
-import NetworkingTestUtilities
 @testable import Networking
+import NetworkingTestUtilities
+import Testing
 
 @Suite("Networking Tests")
 struct DataLoaderTests {

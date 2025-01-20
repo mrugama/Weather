@@ -145,5 +145,5 @@ import RestAPITestUtilities
 #endif
 
 #Preview(traits: .sizeThatFitsLayout) {
-    SearchResultContent(provideWeatherModel())
+    SearchResultContent(provideMockWeatherModel())
 }

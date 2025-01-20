@@ -1,3 +1,4 @@
+#if DEBUG
 import Foundation
 import RestAPI
 import Networking
@@ -25,13 +26,13 @@ public final class MockRestAPI: RestAPI, @unchecked Sendable {
     }
 }
 
-public func provideWeatherData() -> Data {
+public func provideMockWeatherData() -> Data {
     let url = Bundle.module.url(forResource: "weather", withExtension: "json")!
 
     return try! Data(contentsOf: url)
 }
 
-public func provideWeatherModel<T: Decodable>() -> T {
+public func provideMockWeatherModel<T: Decodable>() -> T {
     let url = Bundle.module.url(forResource: "weather", withExtension: "json")!
 
     let data = try! Data(contentsOf: url)
@@ -39,3 +40,4 @@ public func provideWeatherModel<T: Decodable>() -> T {
     decoder.keyDecodingStrategy = .convertFromSnakeCase
     return try! decoder.decode(T.self, from: data)
 }
+#endif

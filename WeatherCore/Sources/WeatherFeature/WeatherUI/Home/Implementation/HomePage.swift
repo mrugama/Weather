@@ -76,8 +76,11 @@ import RestAPITestUtilities
 #endif
 #Preview(traits: .sizeThatFitsLayout) {
     let mockDataLoader = MockDataLoader()
-    mockDataLoader.dataToReturn = provideWeatherData()
+    mockDataLoader.dataToReturn = provideMockWeatherData()
     let vm = SearchViewModelImpl(MockRestAPI(mockDataLoader))
-    vm.appState = .locationDetails(model: provideWeatherModel(), city: "Manhattan")
+    vm.appState = .locationDetails(
+        model: provideMockWeatherModel(),
+        city: "Manhattan"
+    )
     return HomePage(viewModel: vm)
 }

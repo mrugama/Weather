@@ -1,7 +1,6 @@
 @testable import EndpointManager
-import Foundation
-import Testing
 import EndpointManagerTestUtilities
+import Testing
 
 @Suite("EndpointManager Tests")
 struct EndpointManagerTests {

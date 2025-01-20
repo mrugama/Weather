@@ -1,11 +1,9 @@
 import Foundation
-import Testing
-import CommonTestUtilities
+import Model
+import NetworkingTestUtilities
 @testable import RestAPI
 import RestAPITestUtilities
-import EndpointManagerTestUtilities
-import NetworkingTestUtilities
-import Model
+import Testing
 
 @Suite("RestAPI Tests")
 struct RestAPITests {
@@ -20,7 +18,7 @@ struct RestAPITests {
     @Test("Fetch City Successfully")
     func fetchCitySuccessfully() async throws {
         // Given
-        let weatherData = provideWeatherData()
+        let weatherData = provideMockWeatherData()
         mockDataLoader.dataToReturn = weatherData
         
         let restAPI = MockRestAPI(mockDataLoader)

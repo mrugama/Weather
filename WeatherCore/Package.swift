@@ -83,20 +83,21 @@ let package = Package(
         .testTarget(
             name: "RestAPITests",
             dependencies: [
+                "Model",
+                "NetworkingTestUtilities",
                 "RestAPI",
                 "RestAPITestUtilities",
-                "EndpointManagerTestUtilities",
-                "NetworkingTestUtilities",
-                "Model",
             ],
             path: "Sources/WeatherFeature/RestAPITests"
         ),
         .testTarget(
             name: "WeatherUITests",
             dependencies: [
+                "Model",
+                "NetworkingTestUtilities",
+                "RestAPITestUtilities",
                 "WeatherUI",
                 "WeatherUITestUtilities",
-                "RestAPITestUtilities",
             ],
             path: "Sources/WeatherFeature/WeatherUITests"
         ),

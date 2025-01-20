@@ -67,27 +67,12 @@ struct SearchResultCard: View {
     }
 }
 
+#if DEBUG
+import RestAPITestUtilities
+#endif
 #Preview(traits: .sizeThatFitsLayout) {
     SearchResultCard(
-        model: .init(
-            location: .init(
-                name: "Brooklyn",
-                country: "United States"
-            ),
-            current: .init(
-                tempC: 9,
-                tempF: 40,
-                condition: .init(
-                    text: "Sunny",
-                    icon: "//cdn.weatherapi.com/weather/128x128/day/113.png",
-                    code: 200
-                ),
-                humidity: 5,
-                feelslikeC: 0,
-                feelslikeF: 35,
-                uv: 4
-            )
-        ),
+        model: provideMockWeatherModel(),
         appState: .constant(.noLocationSelected)
     )
 }

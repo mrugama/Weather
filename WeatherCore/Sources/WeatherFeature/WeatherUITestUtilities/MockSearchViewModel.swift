@@ -1,8 +1,9 @@
+#if DEBUG
 import Foundation
-import WeatherUI
-import SwiftUI
-import RestAPI
 import Model
+import RestAPI
+import SwiftUI
+import WeatherUI
 
 @MainActor
 public final class MockSearchViewModel: SearchViewModel, Sendable {
@@ -28,3 +29,4 @@ public final class MockSearchViewModel: SearchViewModel, Sendable {
         self.restAPI = restAPI
     }
 }
+#endif
