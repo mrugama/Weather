@@ -8,11 +8,13 @@ struct SearchContentUnavailableView: View {
             Text(placeholder)
                 .font(.system(size: 30, weight: .semibold))
                 .foregroundStyle(Color(red: 44/255, green: 44/255, blue: 44/255))
+                .accessibilityLabel(Text(placeholder))
         } description: {
             Text(description)
                 .font(.subheadline)
                 .foregroundColor(Color(red: 44/255, green: 44/255, blue: 44/255))
                 .padding(.top, 8)
+                .accessibilityLabel(Text(description))
         }
     }
 }

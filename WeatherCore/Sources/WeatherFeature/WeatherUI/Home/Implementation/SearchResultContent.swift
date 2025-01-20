@@ -36,17 +36,17 @@ struct SearchResultContent: View {
     }
     
     var iconView: some View {
-        AsyncImage(url: imageURL) { pahse in
-            switch pahse {
-            case .success(let image):
-                image
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: .x124, height: .x124)
-            default:
-                ProgressView()
-            }
+        AsyncImage(url: imageURL) { image in
+            image
+                .resizable()
+                .scaledToFill()
+                .clipped()
+        } placeholder: {
+            ProgressView()
+                .controlSize(.extraLarge)
         }
+        .frame(width: .x124, height: .x124)
+        .accessibilityLabel(Text("Weather icon"))
     }
     
     var conditionView: some View {
@@ -58,6 +58,7 @@ struct SearchResultContent: View {
         }
         .foregroundStyle(Color.darkGrayishBlack)
         .fontWeight(.semibold)
+        .accessibilityLabel(Text("Condition \(condition)"))
     }
     
     var temperatureView: some View {
@@ -71,6 +72,7 @@ struct SearchResultContent: View {
                     .padding(.top, .x8)
                     .padding(.trailing, -.x8)
             }
+            .accessibilityLabel(Text("Tempuerature \(temp) \(tempSymbol) Farneheit"))
     }
     
     var sectionView: some View {
@@ -87,41 +89,55 @@ struct SearchResultContent: View {
                 style: .continuous
             )
         )
+        .accessibilityLabel(Text("Weather condition section"))
     }
     
     var humidityView: some View {
-        VStack(spacing: .x2) {
+        VStack {
             Text(humidityLabel)
                 .foregroundStyle(Color.lightGray)
                 .font(.caption)
+            Spacer()
             Text(humidity, format: .percent)
                 .foregroundStyle(Color.mediumGray)
                 .font(.subheadline)
         }
-        .font(.caption)
+        .frame(width: .x60, height: .x60)
+        .accessibilityLabel(
+            Text("Humidity level ") +
+            Text(humidity, format: .percent)
+        )
     }
     
     var uvView: some View {
-        VStack(spacing: .x2) {
+        VStack {
             Text(uvLabel)
                 .foregroundStyle(Color.lightGray)
                 .font(.caption)
+            Spacer()
             Text(uv, format: .number.rounded(increment: 0.0))
                 .foregroundStyle(Color.mediumGray)
                 .font(.subheadline)
         }
-        .font(.caption)
+        .frame(width: .x60, height: .x60)
+        .accessibilityLabel(
+            Text("Ultra violet index ") +
+            Text(uv, format: .number.rounded(increment: 0.0))
+        )
     }
     
     var feelsLikeView: some View {
-        VStack(spacing: .x2) {
+        VStack {
             Text(feelsLikeLabel)
                 .foregroundStyle(Color.lightGray)
                 .font(.caption2)
+            Spacer()
             Text("\(feelsLike)°")
                 .foregroundStyle(Color.mediumGray)
                 .font(.subheadline)
         }
+        .frame(width: .x60, height: .x60)
+        .accessibilityLabel(Text("Feels like"))
     }
 }
 

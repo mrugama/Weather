@@ -29,7 +29,10 @@ struct HomePage: View {
                     Spacer()
                 }
             case .locationDetails(let model, _):
-                SearchResultContent(model)
+                VStack {
+                    SearchResultContent(model)
+                    Spacer()
+                }
             case .somethingWentWrong(let error):
                 ContentUnavailableView {
                     Label(
@@ -63,6 +66,7 @@ struct HomePage: View {
                 viewModel.appState = .searchingLocationBy(city: viewModel.searchText)
             }
         }
+        .accessibilityLabel(Text("Home page"))
     }
     
     init(viewModel: SearchViewModel) {
