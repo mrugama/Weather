@@ -93,16 +93,15 @@ struct SearchResultContent: View {
     }
     
     var humidityView: some View {
-        VStack {
+        VStack(spacing: .x2) {
             Text(humidityLabel)
                 .foregroundStyle(Color.lightGray)
                 .font(.caption)
-            Spacer()
             Text(humidity, format: .percent)
                 .foregroundStyle(Color.mediumGray)
                 .font(.subheadline)
         }
-        .frame(width: .x60, height: .x60)
+        .frame(minWidth: .x60, minHeight: .x60)
         .accessibilityLabel(
             Text("Humidity level ") +
             Text(humidity, format: .percent)
@@ -110,16 +109,15 @@ struct SearchResultContent: View {
     }
     
     var uvView: some View {
-        VStack {
+        VStack(spacing: .x2) {
             Text(uvLabel)
                 .foregroundStyle(Color.lightGray)
                 .font(.caption)
-            Spacer()
             Text(uv, format: .number.rounded(increment: 0.0))
                 .foregroundStyle(Color.mediumGray)
                 .font(.subheadline)
         }
-        .frame(width: .x60, height: .x60)
+        .frame(minWidth: .x60, minHeight: .x60)
         .accessibilityLabel(
             Text("Ultra violet index ") +
             Text(uv, format: .number.rounded(increment: 0.0))
@@ -127,16 +125,15 @@ struct SearchResultContent: View {
     }
     
     var feelsLikeView: some View {
-        VStack {
+        VStack(spacing: .x2) {
             Text(feelsLikeLabel)
                 .foregroundStyle(Color.lightGray)
                 .font(.caption2)
-            Spacer()
             Text("\(feelsLike)°")
                 .foregroundStyle(Color.mediumGray)
                 .font(.subheadline)
         }
-        .frame(width: .x60, height: .x60)
+        .frame(minWidth: .x60, minHeight: .x60)
         .accessibilityLabel(Text("Feels like"))
     }
 }
