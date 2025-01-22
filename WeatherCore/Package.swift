@@ -9,12 +9,8 @@ let package = Package(
     products: [
         // MARK: - Feature components
         .library(
-            name: "RestAPI",
-            targets: ["RestAPI"]
-        ),
-        .library(
-            name: "WeatherUI",
-            targets: ["WeatherUI"]
+            name: "LandingPage",
+            targets: ["LandingPage"]
         ),
     ],
     targets: [
@@ -31,17 +27,13 @@ let package = Package(
             path: "Sources/WeatherFeature/RestAPI"
         ),
         .target(
-            name: "WeatherUI",
-            dependencies: ["RestAPI", "DecoratorUI", "Model", "RestAPITestUtilities", "NetworkingTestUtilities"],
-            path: "Sources/WeatherFeature/WeatherUI"
+            name: "LandingPage",
+            dependencies: ["RestAPI", "DecoratorUI", "RestAPITestUtilities", "Networking", "NetworkingTestUtilities"],
+            path: "Sources/WeatherFeature/LandingPage"
         ),
         .target(
             name: "DecoratorUI",
             path: "Sources/WeatherFeature/DecoratorUI"
-        ),
-        .target(
-            name: "Model",
-            path: "Sources/WeatherFeature/Model"
         ),
         
         // MARK: - Shared Test Utilities Targets
@@ -57,10 +49,6 @@ let package = Package(
             name: "RestAPITestUtilities",
             path: "Sources/WeatherFeature/RestAPITestUtilities",
             resources: [.copy("data/weather.json")]
-        ),
-        .target(
-            name: "WeatherUITestUtilities",
-            path: "Sources/WeatherFeature/WeatherUITestUtilities"
         ),
         
         // MARK: Testing Target definition
@@ -83,23 +71,21 @@ let package = Package(
         .testTarget(
             name: "RestAPITests",
             dependencies: [
-                "Model",
                 "NetworkingTestUtilities",
                 "RestAPI",
                 "RestAPITestUtilities",
+                "LandingPage"
             ],
             path: "Sources/WeatherFeature/RestAPITests"
         ),
         .testTarget(
-            name: "WeatherUITests",
+            name: "LandingPageTests",
             dependencies: [
-                "Model",
                 "NetworkingTestUtilities",
                 "RestAPITestUtilities",
-                "WeatherUI",
-                "WeatherUITestUtilities",
+                "LandingPage",
             ],
-            path: "Sources/WeatherFeature/WeatherUITests"
+            path: "Sources/WeatherFeature/LandingPageTests"
         ),
     ]
 )

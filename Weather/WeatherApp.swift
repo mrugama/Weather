@@ -5,21 +5,14 @@
 //  Created by Marlon Rugama on 1/15/25.
 //
 
+import LandingPage
 import SwiftUI
-import WeatherUI
-import RestAPI
 
 @main
 struct WeatherApp: App {
     var body: some Scene {
         WindowGroup {
-            ViewProvider.weatherPage(
-                restAPI: Self.provideRestAPIService()
-            )
+            LandingPage.pageView
         }
-    }
-    
-    static private func provideRestAPIService() -> RestAPI {
-        ConcreteRestAPIService().provideRestAPI()
     }
 }

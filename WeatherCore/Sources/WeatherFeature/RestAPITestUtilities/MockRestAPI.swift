@@ -3,7 +3,7 @@ import Foundation
 import RestAPI
 import Networking
 
-public final class MockRestAPI: RestAPI, @unchecked Sendable {
+public final class MockRestAPI: RestAPI, Sendable {
     private let dataLoader: DataLoader
 
     public init(_ dataLoader: DataLoader) {

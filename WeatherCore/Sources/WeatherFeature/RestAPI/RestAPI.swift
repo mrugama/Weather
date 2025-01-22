@@ -12,17 +12,13 @@ where Self: Sendable {
 
 public protocol RestAPIService
 where Self: Sendable {
-    func provideRestAPI() -> RestAPI
+    func provideRestAPI(_ dataLoader: DataLoader) -> RestAPI
 }
 
 public struct ConcreteRestAPIService: RestAPIService {
-    private let dataLoader: DataLoader
-    public func provideRestAPI() -> RestAPI {
+    public func provideRestAPI(_ dataLoader: DataLoader) -> RestAPI {
         ConcreteRestAPI(dataLoader)
     }
     
-    public init() {
-        let dataLoaderService = ConcreteDataLoaderService()
-        dataLoader = dataLoaderService.provideDataLoader()
-    }
+    public init() { }
 }

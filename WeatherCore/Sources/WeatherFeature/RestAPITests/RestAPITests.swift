@@ -1,7 +1,7 @@
 import Foundation
-import Model
 import NetworkingTestUtilities
 @testable import RestAPI
+@testable import LandingPage
 import RestAPITestUtilities
 import Testing
 
@@ -12,7 +12,7 @@ struct RestAPITests {
     
     init() async throws {
         self.mockDataLoader = MockDataLoader()
-        self.restAPI = MockRestAPI(mockDataLoader)
+        self.restAPI = ConcreteRestAPIService().provideRestAPI(mockDataLoader)
     }
     
     @Test("Fetch City Successfully")
@@ -20,8 +20,6 @@ struct RestAPITests {
         // Given
         let weatherData = provideMockWeatherData()
         mockDataLoader.dataToReturn = weatherData
-        
-        let restAPI = MockRestAPI(mockDataLoader)
         
         // When
         let city: WeatherModel = try await restAPI.fetch("Manhattan")
@@ -35,8 +33,6 @@ struct RestAPITests {
     func fetchCityFailure() async throws {
         // Given
         mockDataLoader.errorToThrow = URLError(.badServerResponse)
-        
-        let restAPI = MockRestAPI(mockDataLoader)
         
         // When & Then
         do {
@@ -54,8 +50,6 @@ struct RestAPITests {
         let assetData = Data([0x01, 0x02, 0x03])
         mockDataLoader.dataToReturn = assetData
         
-        let restAPI = MockRestAPI(mockDataLoader)
-        
         // When
         let data = try await restAPI.fetchAsset(icon: "icon123")
         
@@ -65,14 +59,17 @@ struct RestAPITests {
     
     @Test("Fetch Asset Failure")
     func fetchAssetFailure() async throws {
+        // Given
         mockDataLoader.errorToThrow = URLError(.badServerResponse)
         
-        let restAPI = MockRestAPI(mockDataLoader)
-        
         do {
+            // When
             _ = try await restAPI.fetchAsset(icon: "icon123")
+            
+            // Then if fails
             Issue.record("Expected error to be thrown.")
         } catch {
+            // Then
             #expect(error is URLError)
             #expect(error as! URLError == URLError(.badServerResponse))
         }
