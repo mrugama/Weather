@@ -33,7 +33,8 @@ let package = Package(
         ),
         .target(
             name: "DecoratorUI",
-            path: "Sources/WeatherFeature/DecoratorUI"
+            path: "Sources/WeatherFeature/DecoratorUI",
+            resources: [.process("Media.xcassets")]
         ),
         
         // MARK: - Shared Test Utilities Targets
