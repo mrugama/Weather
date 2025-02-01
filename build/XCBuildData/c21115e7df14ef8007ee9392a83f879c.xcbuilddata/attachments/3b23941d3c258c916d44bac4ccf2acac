@@ -1,0 +1,15 @@
+{
+  "" : {
+    "const-values" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/NetworkingTestUtilities.build/Objects-normal/arm64/NetworkingTestUtilities-master.swiftconstvalues",
+    "dependencies" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/NetworkingTestUtilities.build/Objects-normal/arm64/NetworkingTestUtilities-master.d",
+    "diagnostics" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/NetworkingTestUtilities.build/Objects-normal/arm64/NetworkingTestUtilities-master.dia",
+    "emit-module-dependencies" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/NetworkingTestUtilities.build/Objects-normal/arm64/NetworkingTestUtilities-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/NetworkingTestUtilities.build/Objects-normal/arm64/NetworkingTestUtilities-master-emit-module.dia",
+    "swift-dependencies" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/NetworkingTestUtilities.build/Objects-normal/arm64/NetworkingTestUtilities-master.swiftdeps"
+  },
+  "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/Sources/Foundation/NetworkingTestUtilities/MockDataLoader.swift" : {
+    "index-unit-output-path" : "/WeatherCore.build/Release-iphoneos/NetworkingTestUtilities.build/Objects-normal/arm64/MockDataLoader.o",
+    "llvm-bc" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/NetworkingTestUtilities.build/Objects-normal/arm64/MockDataLoader.bc",
+    "object" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/NetworkingTestUtilities.build/Objects-normal/arm64/MockDataLoader.o"
+  }
+}

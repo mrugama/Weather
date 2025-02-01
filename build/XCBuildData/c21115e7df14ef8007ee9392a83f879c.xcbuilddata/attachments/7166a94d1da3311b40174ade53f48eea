@@ -1,0 +1,4 @@
+module RestAPITestUtilities {
+header "RestAPITestUtilities-Swift.h"
+export *
+}

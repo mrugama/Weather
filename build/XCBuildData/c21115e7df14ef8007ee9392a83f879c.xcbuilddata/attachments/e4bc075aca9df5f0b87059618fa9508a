@@ -1,0 +1,20 @@
+{
+  "" : {
+    "const-values" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/EndpointManager.build/Objects-normal/arm64/EndpointManager-master.swiftconstvalues",
+    "dependencies" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/EndpointManager.build/Objects-normal/arm64/EndpointManager-master.d",
+    "diagnostics" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/EndpointManager.build/Objects-normal/arm64/EndpointManager-master.dia",
+    "emit-module-dependencies" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/EndpointManager.build/Objects-normal/arm64/EndpointManager-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/EndpointManager.build/Objects-normal/arm64/EndpointManager-master-emit-module.dia",
+    "swift-dependencies" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/EndpointManager.build/Objects-normal/arm64/EndpointManager-master.swiftdeps"
+  },
+  "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/Sources/Foundation/EndpointManager/EndpointManager.swift" : {
+    "index-unit-output-path" : "/WeatherCore.build/Release-iphoneos/EndpointManager.build/Objects-normal/arm64/EndpointManager.o",
+    "llvm-bc" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/EndpointManager.build/Objects-normal/arm64/EndpointManager.bc",
+    "object" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/EndpointManager.build/Objects-normal/arm64/EndpointManager.o"
+  },
+  "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/Sources/Foundation/EndpointManager/Implementation/EndpointManager+Implementation.swift" : {
+    "index-unit-output-path" : "/WeatherCore.build/Release-iphoneos/EndpointManager.build/Objects-normal/arm64/EndpointManager+Implementation.o",
+    "llvm-bc" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/EndpointManager.build/Objects-normal/arm64/EndpointManager+Implementation.bc",
+    "object" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/EndpointManager.build/Objects-normal/arm64/EndpointManager+Implementation.o"
+  }
+}

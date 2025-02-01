@@ -1,0 +1,50 @@
+{
+  "" : {
+    "const-values" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/LandingPage-master.swiftconstvalues",
+    "dependencies" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/LandingPage-master.d",
+    "diagnostics" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/LandingPage-master.dia",
+    "emit-module-dependencies" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/LandingPage-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/LandingPage-master-emit-module.dia",
+    "swift-dependencies" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/LandingPage-master.swiftdeps"
+  },
+  "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/Sources/WeatherFeature/LandingPage/Implementation/HomePage.swift" : {
+    "index-unit-output-path" : "/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/HomePage.o",
+    "llvm-bc" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/HomePage.bc",
+    "object" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/HomePage.o"
+  },
+  "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/Sources/WeatherFeature/LandingPage/Implementation/SearchContentUnavailableView.swift" : {
+    "index-unit-output-path" : "/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/SearchContentUnavailableView.o",
+    "llvm-bc" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/SearchContentUnavailableView.bc",
+    "object" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/SearchContentUnavailableView.o"
+  },
+  "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/Sources/WeatherFeature/LandingPage/Implementation/SearchLogic/Model.swift" : {
+    "index-unit-output-path" : "/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/Model.o",
+    "llvm-bc" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/Model.bc",
+    "object" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/Model.o"
+  },
+  "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/Sources/WeatherFeature/LandingPage/Implementation/SearchLogic/SearchViewModel.swift" : {
+    "index-unit-output-path" : "/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/SearchViewModel.o",
+    "llvm-bc" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/SearchViewModel.bc",
+    "object" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/SearchViewModel.o"
+  },
+  "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/Sources/WeatherFeature/LandingPage/Implementation/SearchLogic/WeatherAppState.swift" : {
+    "index-unit-output-path" : "/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/WeatherAppState.o",
+    "llvm-bc" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/WeatherAppState.bc",
+    "object" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/WeatherAppState.o"
+  },
+  "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/Sources/WeatherFeature/LandingPage/Implementation/SearchResultCard.swift" : {
+    "index-unit-output-path" : "/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/SearchResultCard.o",
+    "llvm-bc" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/SearchResultCard.bc",
+    "object" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/SearchResultCard.o"
+  },
+  "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/Sources/WeatherFeature/LandingPage/Implementation/SearchResultContent.swift" : {
+    "index-unit-output-path" : "/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/SearchResultContent.o",
+    "llvm-bc" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/SearchResultContent.bc",
+    "object" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/SearchResultContent.o"
+  },
+  "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/Sources/WeatherFeature/LandingPage/LandingPage.swift" : {
+    "index-unit-output-path" : "/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/LandingPage.o",
+    "llvm-bc" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/LandingPage.bc",
+    "object" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/LandingPage.build/Objects-normal/arm64/LandingPage.o"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "" : {
+    "const-values" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/RestAPI.build/Objects-normal/arm64/RestAPI-master.swiftconstvalues",
+    "dependencies" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/RestAPI.build/Objects-normal/arm64/RestAPI-master.d",
+    "diagnostics" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/RestAPI.build/Objects-normal/arm64/RestAPI-master.dia",
+    "emit-module-dependencies" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/RestAPI.build/Objects-normal/arm64/RestAPI-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/RestAPI.build/Objects-normal/arm64/RestAPI-master-emit-module.dia",
+    "swift-dependencies" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/RestAPI.build/Objects-normal/arm64/RestAPI-master.swiftdeps"
+  },
+  "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/Sources/WeatherFeature/RestAPI/Implementation/RestAPI+Implementation.swift" : {
+    "index-unit-output-path" : "/WeatherCore.build/Release-iphoneos/RestAPI.build/Objects-normal/arm64/RestAPI+Implementation.o",
+    "llvm-bc" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/RestAPI.build/Objects-normal/arm64/RestAPI+Implementation.bc",
+    "object" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/RestAPI.build/Objects-normal/arm64/RestAPI+Implementation.o"
+  },
+  "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/Sources/WeatherFeature/RestAPI/RestAPI.swift" : {
+    "index-unit-output-path" : "/WeatherCore.build/Release-iphoneos/RestAPI.build/Objects-normal/arm64/RestAPI.o",
+    "llvm-bc" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/RestAPI.build/Objects-normal/arm64/RestAPI.bc",
+    "object" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/RestAPI.build/Objects-normal/arm64/RestAPI.o"
+  }
+}

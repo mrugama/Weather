@@ -1,0 +1,4 @@
+module DecoratorUI {
+header "DecoratorUI-Swift.h"
+export *
+}

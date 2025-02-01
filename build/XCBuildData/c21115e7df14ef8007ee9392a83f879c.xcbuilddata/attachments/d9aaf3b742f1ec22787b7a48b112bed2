@@ -1,0 +1,25 @@
+{
+  "" : {
+    "const-values" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/Networking.build/Objects-normal/arm64/Networking-master.swiftconstvalues",
+    "dependencies" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/Networking.build/Objects-normal/arm64/Networking-master.d",
+    "diagnostics" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/Networking.build/Objects-normal/arm64/Networking-master.dia",
+    "emit-module-dependencies" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/Networking.build/Objects-normal/arm64/Networking-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/Networking.build/Objects-normal/arm64/Networking-master-emit-module.dia",
+    "swift-dependencies" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/Networking.build/Objects-normal/arm64/Networking-master.swiftdeps"
+  },
+  "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/Sources/Foundation/Networking/DataLoaderService.swift" : {
+    "index-unit-output-path" : "/WeatherCore.build/Release-iphoneos/Networking.build/Objects-normal/arm64/DataLoaderService.o",
+    "llvm-bc" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/Networking.build/Objects-normal/arm64/DataLoaderService.bc",
+    "object" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/Networking.build/Objects-normal/arm64/DataLoaderService.o"
+  },
+  "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/Sources/Foundation/Networking/Implementation/DataLoader+Implementation.swift" : {
+    "index-unit-output-path" : "/WeatherCore.build/Release-iphoneos/Networking.build/Objects-normal/arm64/DataLoader+Implementation.o",
+    "llvm-bc" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/Networking.build/Objects-normal/arm64/DataLoader+Implementation.bc",
+    "object" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/Networking.build/Objects-normal/arm64/DataLoader+Implementation.o"
+  },
+  "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/Sources/Foundation/Networking/Implementation/NetworkError.swift" : {
+    "index-unit-output-path" : "/WeatherCore.build/Release-iphoneos/Networking.build/Objects-normal/arm64/NetworkError.o",
+    "llvm-bc" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/Networking.build/Objects-normal/arm64/NetworkError.bc",
+    "object" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/Networking.build/Objects-normal/arm64/NetworkError.o"
+  }
+}

@@ -1,0 +1,4 @@
+module EndpointManager {
+header "EndpointManager-Swift.h"
+export *
+}
