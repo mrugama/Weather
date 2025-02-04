@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Model
 
 struct HomePage: View {
     @State private var viewModel: SearchViewModel

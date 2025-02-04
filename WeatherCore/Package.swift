@@ -14,21 +14,26 @@ let package = Package(
         ),
     ],
     targets: [
-        // MARK: - Components
+        // MARK: - Modules
+        .target(
+            name: "WTLogging",
+            path: "Sources/Foundation/WTLogging"),
         .target(
             name: "Networking",
+            dependencies: ["WTLogging"],
             path: "Sources/Foundation/Networking"),
         .target(
             name: "EndpointManager",
+            dependencies: ["WTLogging"],
             path: "Sources/Foundation/EndpointManager"),
         .target(
             name: "RestAPI",
-            dependencies: ["Networking", "EndpointManager"],
+            dependencies: ["Networking", "EndpointManager", "WTLogging"],
             path: "Sources/WeatherFeature/RestAPI"
         ),
         .target(
             name: "LandingPage",
-            dependencies: ["RestAPI", "DecoratorUI", "RestAPITestUtilities", "Networking", "NetworkingTestUtilities"],
+            dependencies: ["RestAPI", "DecoratorUI", "RestAPITestUtilities", "Networking", "NetworkingTestUtilities", "WTLogging"],
             path: "Sources/WeatherFeature/LandingPage"
         ),
         .target(
@@ -37,7 +42,7 @@ let package = Package(
             resources: [.process("Media.xcassets")]
         ),
         
-        // MARK: - Shared Test Utilities Targets
+        // MARK: - Shared Test Utility Targets
         .target(
             name: "NetworkingTestUtilities",
             path: "Sources/Foundation/NetworkingTestUtilities"

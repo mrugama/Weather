@@ -1,6 +1,8 @@
-import Foundation
-import Networking
 import EndpointManager
+import Foundation
+import OSLog
+import WTLogging
+import Networking
 
 enum RestAPIError: LocalizedError, Equatable {
     case invalidDataType
@@ -9,6 +11,7 @@ enum RestAPIError: LocalizedError, Equatable {
 struct ConcreteRestAPI: RestAPI {
     private let dataLoader: any DataLoader
     private let endpointManagerService: ConcreteEndpointManagerService
+    private let logger = Logger(module: .restAPI)
     
     init(_ dataLoader: any DataLoader) {
         self.dataLoader = dataLoader
@@ -21,6 +24,7 @@ struct ConcreteRestAPI: RestAPI {
         let jsonDecoder = JSONDecoder()
         jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
         guard let decodedData = try? jsonDecoder.decode(T.self, from: data) else {
+            logger.error("\(RestAPIError.invalidDataType)")
             throw RestAPIError.invalidDataType
         }
         return decodedData
