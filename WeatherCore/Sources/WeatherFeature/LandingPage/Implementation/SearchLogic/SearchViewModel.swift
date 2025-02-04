@@ -1,5 +1,7 @@
 import RestAPI
 import SwiftUI
+import OSLog
+import WTLogging
 
 @MainActor
 protocol SearchViewModel
@@ -17,6 +19,7 @@ final class SearchViewModelImpl: SearchViewModel, Sendable {
     var searchText: String = ""
     let prompt: LocalizedStringKey = "Search Location"
     var appState: WeatherAppState = .noLocationSelected
+    private let logger = Logger(module: .landingPage)
     
     private var restAPI: RestAPI
     
@@ -28,6 +31,7 @@ final class SearchViewModelImpl: SearchViewModel, Sendable {
         do {
             return try await restAPI.fetch(city)
         } catch {
+            logger.error("\(error)")
             withAnimation {
                 appState = .somethingWentWrong(
                     error: error.localizedDescription

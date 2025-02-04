@@ -7,7 +7,6 @@
 
 import DecoratorUI
 import SwiftUI
-import Model
 
 struct SearchResultCard: View {
     var model: WeatherModel

@@ -6,7 +6,6 @@
 //
 import DecoratorUI
 import SwiftUI
-import Model
 
 struct SearchResultContent: View {
     let imageURL: URL

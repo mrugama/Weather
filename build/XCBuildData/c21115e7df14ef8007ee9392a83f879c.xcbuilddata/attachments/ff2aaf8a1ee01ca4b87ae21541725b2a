@@ -1,0 +1,4 @@
+module RestAPI {
+header "RestAPI-Swift.h"
+export *
+}

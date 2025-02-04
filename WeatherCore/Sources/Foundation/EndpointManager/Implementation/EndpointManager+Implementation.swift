@@ -1,4 +1,6 @@
 import Foundation
+import OSLog
+import WTLogging
 
 enum EndpointError: LocalizedError, Equatable {
     case invalidURL
@@ -16,6 +18,8 @@ struct ConcreteEndpointManager: EndpointManager {
         "PASTE-YOUR-KEYAPI-HERE"
     }
     
+    private let logger = Logger(module: .endpoint)
+    
     private var configuration: EndpointConfiguration
     
     init(_ configuration: EndpointConfiguration) {
@@ -23,7 +27,11 @@ struct ConcreteEndpointManager: EndpointManager {
     }
     
     func callAsFunction() throws -> URLRequest {
-        guard let url = makeURL() else { throw EndpointError.invalidURL }
+        guard let url = makeURL()
+        else {
+            logger.error("\(EndpointError.invalidURL)")
+            throw EndpointError.invalidURL
+        }
         return URLRequest(url: url)
     }
 }

@@ -1,0 +1,30 @@
+{
+  "" : {
+    "const-values" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/DecoratorUI.build/Objects-normal/arm64/DecoratorUI-master.swiftconstvalues",
+    "dependencies" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/DecoratorUI.build/Objects-normal/arm64/DecoratorUI-master.d",
+    "diagnostics" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/DecoratorUI.build/Objects-normal/arm64/DecoratorUI-master.dia",
+    "emit-module-dependencies" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/DecoratorUI.build/Objects-normal/arm64/DecoratorUI-master-emit-module.d",
+    "emit-module-diagnostics" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/DecoratorUI.build/Objects-normal/arm64/DecoratorUI-master-emit-module.dia",
+    "swift-dependencies" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/DecoratorUI.build/Objects-normal/arm64/DecoratorUI-master.swiftdeps"
+  },
+  "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/Sources/WeatherFeature/DecoratorUI/CGFloat+custom.swift" : {
+    "index-unit-output-path" : "/WeatherCore.build/Release-iphoneos/DecoratorUI.build/Objects-normal/arm64/CGFloat+custom.o",
+    "llvm-bc" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/DecoratorUI.build/Objects-normal/arm64/CGFloat+custom.bc",
+    "object" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/DecoratorUI.build/Objects-normal/arm64/CGFloat+custom.o"
+  },
+  "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/Sources/WeatherFeature/DecoratorUI/Color+custom.swift" : {
+    "index-unit-output-path" : "/WeatherCore.build/Release-iphoneos/DecoratorUI.build/Objects-normal/arm64/Color+custom.o",
+    "llvm-bc" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/DecoratorUI.build/Objects-normal/arm64/Color+custom.bc",
+    "object" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/DecoratorUI.build/Objects-normal/arm64/Color+custom.o"
+  },
+  "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/DecoratorUI.build/DerivedSources/GeneratedAssetSymbols.swift" : {
+    "index-unit-output-path" : "/WeatherCore.build/Release-iphoneos/DecoratorUI.build/Objects-normal/arm64/GeneratedAssetSymbols.o",
+    "llvm-bc" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/DecoratorUI.build/Objects-normal/arm64/GeneratedAssetSymbols.bc",
+    "object" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/DecoratorUI.build/Objects-normal/arm64/GeneratedAssetSymbols.o"
+  },
+  "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/DecoratorUI.build/DerivedSources/resource_bundle_accessor.swift" : {
+    "index-unit-output-path" : "/WeatherCore.build/Release-iphoneos/DecoratorUI.build/Objects-normal/arm64/resource_bundle_accessor.o",
+    "llvm-bc" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/DecoratorUI.build/Objects-normal/arm64/resource_bundle_accessor.bc",
+    "object" : "/Users/marlonrugama/src/SwiftUI/Weather/WeatherCore/build/WeatherCore.build/Release-iphoneos/DecoratorUI.build/Objects-normal/arm64/resource_bundle_accessor.o"
+  }
+}
