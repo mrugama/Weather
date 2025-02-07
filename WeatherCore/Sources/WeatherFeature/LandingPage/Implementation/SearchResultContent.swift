@@ -21,13 +21,12 @@ struct SearchResultContent: View {
     
     var body: some View {
         HStack(alignment: .top) {
-            VStack(spacing: .x36) {
-                VStack(spacing: .x24) {
-                    iconView
-                    conditionView
-                    temperatureView
-                }
+            VStack(spacing: .x24) {
+                iconView
+                conditionView
+                temperatureView
                 sectionView
+                    .padding([.top], .x12)
             }
         }
         .padding(.x16)
