@@ -1,10 +1,17 @@
 # Weather
 ## Video
 https://github.com/user-attachments/assets/2ace9345-f7d8-4342-bac3-80653a3a896c
-## Images
-| No location selected | Searching location | Selected location |
-| ---- | ---- | ---- |
-| <img src="https://github.com/user-attachments/assets/1886f22b-6af2-4848-ae0a-5397b2062734" alt="Example Image" width="200"> | <img src="https://github.com/user-attachments/assets/999f24bf-ba3d-42ae-bd42-c78c7a99db2b" alt="Search result" width="200"> | <img src="https://github.com/user-attachments/assets/64ee423d-c2ac-4350-bc55-32859d5e9860" alt="Landing page" width="200"> |
+## App states
+| No location selected | Searching loading | Location details | Error handler
+| ---- | ---- | ---- | ---- |
+| <img src="https://github.com/user-attachments/assets/99563261-6435-4550-8054-68d6ea7c6792" alt="No city selected" width="200"> | <img src="https://github.com/user-attachments/assets/2bbd802d-576e-4c8c-b154-0c0eb443ffbf" alt="Search loading" width="200"> | <img src="https://github.com/user-attachments/assets/14c83383-b927-49a0-b985-ac94d0411175" alt="Location details" width="200"> | <img src="https://github.com/user-attachments/assets/fdf4cc61-d0d8-4be5-bacd-d780d2daf7a0" alt="Error handler" width="200"> |
+
+## Card designs
+| Searching result | Details |
+| ---- | ---- |
+| <img src="https://github.com/user-attachments/assets/00539ad5-72c0-4c66-ba94-926681db604f" alt="Searching result" width="200"> | <img src="https://github.com/user-attachments/assets/125e86ad-5a79-4e09-a6e1-09fb0018c9c5" alt="Location details" width="200"> |
+
+
 
 ### Steps to Run the App
 
