@@ -1,4 +1,40 @@
 # Weather
+## Compatibility
+![](https://img.shields.io/badge/iOS-iOS_17+-informational?style=flat&logo=iOS&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/Swift-4_5_&_6-informational?style=flat&logo=Swift&logoColor=white&color=2bbc8a)
+
+## App architecture
+The weather-tracking app has a single feature component. `Landing Page` is a self-contained feature component with some module dependencies as shown in the graph below.
+```mermaid
+graph TD;
+    WeatherApp-->LandingPage;
+    LandingPage-->RestAPI;
+    RestAPI-->EndpointManager;
+    RestAPI-->WTLogging;
+    EndpointManager-->WTLogging;
+    RestAPI-->Networking;
+    Networking-->WTLogging;
+    LandingPage-->DecoratorUI;
+```
+
+## &#x1f4c8; GitHub Stats
+
+<a href="https://github.com/mrugama/Weather">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=mrugama&hide=java,html,tex&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21&langs_count=3" />
+</a>
+<a href="https://github.com/mrugama/Weather">
+  <img align="center" src="https://github-readme-stats.vercel.app/api?username=mrugama&show_icons=true&line_height=27&count_private=true&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21" alt="Marlon's GitHub Stats" />
+</a>
+
+<a href="https://github.com/mrugama/Weather">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=mrugama&repo=Weather&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21" />
+</a>
+
+
+<a href="https://github.com/mrugama/Weather">
+  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=mrugama&repo=Weather&title_color=ffffff&text_color=c9cacc&icon_color=2bbc8a&bg_color=1d1f21" />
+</a>   
+
 ## Video
 https://github.com/user-attachments/assets/2ace9345-f7d8-4342-bac3-80653a3a896c
 ## App states
