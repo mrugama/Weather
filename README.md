@@ -3,6 +3,9 @@
 ![](https://img.shields.io/badge/iOS-iOS_17+-informational?style=flat&logo=iOS&logoColor=white&color=2bbc8a)
 ![](https://img.shields.io/badge/Swift-4_5_&_6-informational?style=flat&logo=Swift&logoColor=white&color=2bbc8a)
 
+## Frameworks
+![Frameworks](https://img.shields.io/badge/Frameworks-SwiftUI_Concurrency_OSLog_Testing-informational?style=flat&logo=Framework&logoColor=white&color=2bbc8a)
+
 ## App architecture
 The weather-tracking app has a single feature component. `Landing Page` is a self-contained feature component with some module dependencies as shown in the graph below.
 ```mermaid
