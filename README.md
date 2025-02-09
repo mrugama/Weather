@@ -1,11 +1,17 @@
 # Weather
-The weather iOS app provides free access to weather and geo data. This is a sample project used to apply best practices and keep up to date with modern language.
+The weather iOS app provides free access to weather and geo data. This is a sample project used to apply best practices and keep up to date with modern programming languages.
 ## Compatibility
 ![](https://img.shields.io/badge/iOS-iOS_17+-informational?style=flat&logo=iOS&logoColor=white&color=2bbc8a)
-![](https://img.shields.io/badge/Swift-4_5_&_6-informational?style=flat&logo=Swift&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/Swift-4-informational?style=flat&logo=Swift&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/Swift-5-informational?style=flat&logo=Swift&logoColor=white&color=2bbc8a)
+![](https://img.shields.io/badge/Swift-6-informational?style=flat&logo=Swift&logoColor=white&color=2bbc8a)
 
 ## Frameworks
-![Frameworks](https://img.shields.io/badge/Frameworks-SwiftUI_Concurrency_OSLog_Testing-informational?style=flat&logo=Framework&logoColor=white&color=2bbc8a)
+![Frameworks](https://img.shields.io/badge/API-SwiftUI-informational?style=flat&logo=Framework&logoColor=white&color=2bbc8a)
+![Frameworks](https://img.shields.io/badge/API-Testing-informational?style=flat&logo=Framework&logoColor=white&color=2bbc8a)
+![Frameworks](https://img.shields.io/badge/API-Concurrency-informational?style=flat&logo=Framework&logoColor=white&color=2bbc8a)
+![Frameworks](https://img.shields.io/badge/API-OSLog-informational?style=flat&logo=Framework&logoColor=white&color=2bbc8a)
+![Frameworks](https://img.shields.io/badge/Framework-SwiftPM-informational?style=flat&logo=Framework&logoColor=white&color=2bbc8a)
 
 ## App architecture
 The weather-tracking app has a single feature component. `Landing Page` is a self-contained feature component with some module dependencies as shown in the graph below.
