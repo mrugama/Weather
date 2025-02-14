@@ -9,12 +9,14 @@
 /* Begin PBXBuildFile section */
 		E50FE4562D38C1F7005F9984 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E50FE4552D38C1F7005F9984 /* README.md */; };
 		E50FE46E2D4083AF005F9984 /* LandingPage in Frameworks */ = {isa = PBXBuildFile; productRef = E50FE46D2D4083AF005F9984 /* LandingPage */; };
+		E564329D2D5FC1AF00180963 /* WeatherTestPlan.xctestplan in Resources */ = {isa = PBXBuildFile; fileRef = E564329C2D5FC1AF00180963 /* WeatherTestPlan.xctestplan */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		E50FE4232D380E1F005F9984 /* Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E50FE4372D38109E005F9984 /* WeatherCore */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = WeatherCore; sourceTree = "<group>"; };
 		E50FE4552D38C1F7005F9984 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		E564329C2D5FC1AF00180963 /* WeatherTestPlan.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = WeatherTestPlan.xctestplan; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -53,6 +55,7 @@
 		E50FE41A2D380E1F005F9984 = {
 			isa = PBXGroup;
 			children = (
+				E564329C2D5FC1AF00180963 /* WeatherTestPlan.xctestplan */,
 				E50FE4552D38C1F7005F9984 /* README.md */,
 				E50FE4372D38109E005F9984 /* WeatherCore */,
 				E50FE4252D380E1F005F9984 /* Weather */,
@@ -143,6 +146,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E564329D2D5FC1AF00180963 /* WeatherTestPlan.xctestplan in Resources */,
 				E50FE4562D38C1F7005F9984 /* README.md in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
