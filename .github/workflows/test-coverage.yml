@@ -21,7 +21,7 @@ jobs:
           xcodebuild test \
             -project Weather.xcodeproj \
             -scheme Weather \
-            -destination 'platform=iOS Simulator,name=iPhone 14' \
+            -destination 'platform=iOS Simulator,name=iPhone 16' \
             -enableCodeCoverage YES \
             -resultBundlePath TestResults.xcresult | tee xcodebuild.log
 
