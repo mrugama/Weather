@@ -19,7 +19,6 @@ jobs:
       - name: Run tests with coverage
         run: |
           xcodebuild test \
-            -project Weather.xcodeproj \
             -scheme Weather \
             -destination 'platform=iOS Simulator,name=iPhone 16' \
             -enableCodeCoverage YES \
