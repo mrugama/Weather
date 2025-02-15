@@ -22,12 +22,13 @@ jobs:
             -project Weather.xcodeproj \
             -scheme Weather \
             -destination 'platform=iOS Simulator,name=iPhone 14' \
-            -enableCodeCoverage YES | tee xcodebuild.log
+            -enableCodeCoverage YES \
+            -resultBundlePath TestResults.xcresult | tee xcodebuild.log
 
       - name: Extract coverage data
         run: |
           mkdir -p coverage
-          xcrun xccov view --report --json $(find ~/Library/Developer/Xcode/DerivedData -name "*.xcresult" | tail -1) > coverage/coverage.json
+          xcrun xccov view --report --json TestResults.xcresult > coverage/coverage.json
 
       - name: Commit and push coverage report
         run: |
