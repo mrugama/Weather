@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+  pull_request:
 
 jobs:
   test:
@@ -12,15 +13,26 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
+      - name: Set up Xcode
+        run: sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
+
       - name: Run tests with coverage
         run: |
-          xcodebuild test -scheme YourScheme -destination 'platform=iOS Simulator,name=iPhone 14' -enableCodeCoverage YES
-          xcrun xccov view --report --json build/Logs/Test/*.xcresult > coverage.json
+          xcodebuild test \
+            -project Weather.xcodeproj \
+            -scheme Weather \
+            -destination 'platform=iOS Simulator,name=iPhone 14' \
+            -enableCodeCoverage YES | tee xcodebuild.log
+
+      - name: Extract coverage data
+        run: |
+          mkdir -p coverage
+          xcrun xccov view --report --json $(find ~/Library/Developer/Xcode/DerivedData -name "*.xcresult" | tail -1) > coverage/coverage.json
 
       - name: Commit and push coverage report
         run: |
           git config --global user.name "github-actions"
           git config --global user.email "github-actions@github.com"
-          git add coverage.json
+          git add coverage/coverage.json
           git commit -m "Update test coverage report" || exit 0
           git push
