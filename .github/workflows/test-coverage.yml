@@ -13,7 +13,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Select latest Xcode version
+      - name: Show available Xcode versions
+        run: ls /Applications | grep Xcode
+
+      - name: Use latest available Xcode version
         run: sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
 
       - name: Print Xcode version
@@ -27,7 +30,7 @@ jobs:
             -destination 'platform=iOS Simulator,name=iPhone 15' \
             -enableCodeCoverage YES \
             -resultBundlePath TestResults.xcresult | tee xcodebuild.log
-        continue-on-error: true  # Allow failure but proceed to debugging
+        continue-on-error: true
 
       - name: Debug test failure (if any)
         if: failure()
