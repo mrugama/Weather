@@ -1,0 +1,26 @@
+name: Update Test Coverage
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run tests with coverage
+        run: |
+          xcodebuild test -scheme YourScheme -destination 'platform=iOS Simulator,name=iPhone 14' -enableCodeCoverage YES
+          xcrun xccov view --report --json build/Logs/Test/*.xcresult > coverage.json
+
+      - name: Commit and push coverage report
+        run: |
+          git config --global user.name "github-actions"
+          git config --global user.email "github-actions@github.com"
+          git add coverage.json
+          git commit -m "Update test coverage report" || exit 0
+          git push
