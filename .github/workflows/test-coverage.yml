@@ -1,3 +1,4 @@
+# .github/workflows/test-coverage.yml
 name: Update Test Coverage
 
 on:
@@ -29,7 +30,7 @@ jobs:
         run: |
           xcodebuild build \
             -project Weather.xcodeproj \
-            -scheme NetworkingTests \
+            -scheme ExistingSchemeName \
             -destination 'platform=iOS Simulator,name=iPhone 16' \
             | tee xcodebuild.log
 
@@ -37,7 +38,7 @@ jobs:
         run: |
           xcodebuild test \
             -project Weather.xcodeproj \
-            -scheme NetworkingTests \
+            -scheme Weather \
             -destination 'platform=iOS Simulator,name=iPhone 16' \
             -enableCodeCoverage YES \
             -resultBundlePath TestResults.xcresult | tee xcodebuild.log
