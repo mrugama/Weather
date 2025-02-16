@@ -45,7 +45,8 @@ jobs:
 
       - name: Debug test failure (if any)
         if: failure()
-        run: cat xcodebuild.log
+        run: |
+          tail -n 100 xcodebuild.log
 
       - name: Verify coverage data
         run: |
