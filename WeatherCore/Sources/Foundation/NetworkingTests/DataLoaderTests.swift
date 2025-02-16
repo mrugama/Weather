@@ -1,6 +1,6 @@
 import Foundation
 @testable import Networking
-import NetworkingTestUtilities
+@testable import NetworkingTestUtilities
 import Testing
 
 @Suite("Networking Tests")

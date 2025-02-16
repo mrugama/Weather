@@ -1,7 +1,7 @@
 import Foundation
-import NetworkingTestUtilities
-import RestAPI
-import RestAPITestUtilities
+@testable import NetworkingTestUtilities
+@testable import RestAPI
+@testable import RestAPITestUtilities
 import Testing
 @testable import LandingPage
 
