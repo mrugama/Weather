@@ -55,7 +55,7 @@ let package = Package(
         ),
         .target(
             name: "RestAPITestUtilities",
-            dependencies: ["RestAPITest"],
+            dependencies: ["RestAPI"],
             path: "Sources/WeatherFeature/RestAPITestUtilities",
             resources: [.copy("data/weather.json")]
         ),
