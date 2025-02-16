@@ -86,7 +86,7 @@ jobs:
           echo "### 📊 General Coverage" >> coverage_section.md
           TOTAL_COVERAGE=$(jq -r '.coveredLines / .executableLines * 100 | round / 1' coverage.json)
           COVERAGE_BADGE_URL=$(generate_badge $TOTAL_COVERAGE)
-          echo "[![Test Coverage]($COVERAGE_BADGE_URL)](https://github.com/mrugama/Weather/actions)" >> coverage_section.md
+          echo "![Test Coverage]($COVERAGE_BADGE_URL)" >> coverage_section.md
           echo "" >> coverage_section.md
           echo "---" >> coverage_section.md
           echo "### 📄 File-wise Coverage Breakdown" >> coverage_section.md
@@ -96,7 +96,7 @@ jobs:
           # Generate file-wise coverage rows with dynamic badges
           jq -r '.targets[].files[] | "\(.name) \(.coveredLines) \(.executableLines) \(.lineCoverage * 100 | round)"' coverage.json | while read -r name coveredLines executableLines coverage; do
             BADGE_URL=$(generate_badge $coverage)
-            echo "| $name | $coveredLines | $executableLines | [![Coverage]($BADGE_URL)](https://github.com/mrugama/Weather/actions) |" >> coverage_section.md
+            echo "| $name | $coveredLines | $executableLines | ![Coverage]($BADGE_URL) |" >> coverage_section.md
           done
 
           echo "---" >> coverage_section.md
