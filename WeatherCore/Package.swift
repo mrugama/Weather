@@ -45,14 +45,17 @@ let package = Package(
         // MARK: - Shared Test Utility Targets
         .target(
             name: "NetworkingTestUtilities",
+            dependencies: ["Networking"],
             path: "Sources/Foundation/NetworkingTestUtilities"
         ),
         .target(
             name: "EndpointManagerTestUtilities",
+            dependencies: ["EndpointManager"],
             path: "Sources/Foundation/EndpointManagerTestUtilities"
         ),
         .target(
             name: "RestAPITestUtilities",
+            dependencies: ["RestAPI"],
             path: "Sources/WeatherFeature/RestAPITestUtilities",
             resources: [.copy("data/weather.json")]
         ),

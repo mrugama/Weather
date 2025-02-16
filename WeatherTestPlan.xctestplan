@@ -1,0 +1,45 @@
+{
+  "configurations" : [
+    {
+      "id" : "D1AD48C3-84FB-4272-B50E-40A3789FBC0E",
+      "name" : "Configuration 1",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testTimeoutsEnabled" : true
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:WeatherCore",
+        "identifier" : "LandingPageTests",
+        "name" : "LandingPageTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:WeatherCore",
+        "identifier" : "EndpointManagerTests",
+        "name" : "EndpointManagerTests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:WeatherCore",
+        "identifier" : "RestAPITests",
+        "name" : "RestAPITests"
+      }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:WeatherCore",
+        "identifier" : "NetworkingTests",
+        "name" : "NetworkingTests"
+      }
+    }
+  ],
+  "version" : 1
+}

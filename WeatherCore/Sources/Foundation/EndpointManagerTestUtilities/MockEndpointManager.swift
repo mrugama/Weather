@@ -1,4 +1,3 @@
-#if DEBUG
 import EndpointManager
 import Foundation
 
@@ -22,4 +21,3 @@ public final class MockEndpointManager: EndpointManager, @unchecked Sendable {
         }
     }
 }
-#endif

@@ -1,4 +1,3 @@
-#if DEBUG
 import Foundation
 import RestAPI
 import Networking
@@ -40,4 +39,3 @@ public func provideMockWeatherModel<T: Decodable>() -> T {
     decoder.keyDecodingStrategy = .convertFromSnakeCase
     return try! decoder.decode(T.self, from: data)
 }
-#endif
