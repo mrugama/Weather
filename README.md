@@ -27,94 +27,7 @@ graph TD;
     LandingPage-->DecoratorUI;
 ```
 
-## Test Coverage
-## Test Coverage
-[![Test Coverage](https://img.shields.io/badge/Test%20Coverage-21.067221067221066%25-green?style=flat&logo=swift&logoColor=white)](https://github.com/mrugama/Weather/actions)
-
-### 📊 General Coverage
-> **Total Test Coverage:** `21.07%`
-
----
-### 📄 File-wise Coverage Breakdown
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
-| EndpointManager.swift | 4 | 4 | 100% |
-| EndpointManager+Implementation.swift | 40 | 50 | 80% |
-| MockEndpointManager.swift | 14 | 14 | 100% |
-| EndpointManagerTests.swift | 22 | 22 | 100% |
-| LandingPage.swift | 0 | 9 | 0% |
-| SearchViewModelTests.swift | 33 | 33 | 100% |
-| SearchResultContent.swift | 0 | 188 | 0% |
-| MockDataLoader.swift | 7 | 8 | 88% |
-| HomePage.swift | 0 | 143 | 0% |
-| SearchViewModel.swift | 26 | 26 | 100% |
-| SearchResultCard.swift | 0 | 106 | 0% |
-| MockRestAPI.swift | 5 | 29 | 17% |
-| Model.swift | 3 | 44 | 7% |
-| SearchContentUnavailableView.swift | 0 | 29 | 0% |
-| NetworkError.swift | 0 | 8 | 0% |
-| MockDataLoader.swift | 7 | 8 | 88% |
-| DataLoader+Implementation.swift | 0 | 18 | 0% |
-| DataLoaderService.swift | 0 | 4 | 0% |
-| DataLoaderTests.swift | 27 | 28 | 96% |
-| LandingPage.swift | 0 | 9 | 0% |
-| SearchResultContent.swift | 0 | 188 | 0% |
-| RestAPI+Implementation.swift | 19 | 22 | 86% |
-| MockDataLoader.swift | 7 | 8 | 88% |
-| RestAPI.swift | 4 | 4 | 100% |
-| HomePage.swift | 0 | 143 | 0% |
-| RestAPITests.swift | 52 | 56 | 93% |
-| SearchViewModel.swift | 26 | 26 | 100% |
-| SearchResultCard.swift | 0 | 106 | 0% |
-| MockRestAPI.swift | 5 | 29 | 17% |
-| Model.swift | 3 | 44 | 7% |
-| SearchContentUnavailableView.swift | 0 | 29 | 0% |
-| WeatherApp.swift | 0 | 8 | 0% |
----
-
-[![Test Coverage](https://img.shields.io/badge/Test%20Coverage-21.067221067221066%25-green?style=flat&logo=swift&logoColor=white)](https://github.com/mrugama/Weather/actions)
-
-### 📊 General Coverage
-> **Total Test Coverage:** `21.07%`
-
----
-### 📄 File-wise Coverage Breakdown
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
-| EndpointManager.swift | 4 | 4 | 100% |
-| EndpointManager+Implementation.swift | 40 | 50 | 80% |
-| MockEndpointManager.swift | 14 | 14 | 100% |
-| EndpointManagerTests.swift | 22 | 22 | 100% |
-| LandingPage.swift | 0 | 9 | 0% |
-| SearchViewModelTests.swift | 33 | 33 | 100% |
-| SearchResultContent.swift | 0 | 188 | 0% |
-| MockDataLoader.swift | 7 | 8 | 88% |
-| HomePage.swift | 0 | 143 | 0% |
-| SearchViewModel.swift | 26 | 26 | 100% |
-| SearchResultCard.swift | 0 | 106 | 0% |
-| MockRestAPI.swift | 5 | 29 | 17% |
-| Model.swift | 3 | 44 | 7% |
-| SearchContentUnavailableView.swift | 0 | 29 | 0% |
-| NetworkError.swift | 0 | 8 | 0% |
-| MockDataLoader.swift | 7 | 8 | 88% |
-| DataLoader+Implementation.swift | 0 | 18 | 0% |
-| DataLoaderService.swift | 0 | 4 | 0% |
-| DataLoaderTests.swift | 27 | 28 | 96% |
-| LandingPage.swift | 0 | 9 | 0% |
-| SearchResultContent.swift | 0 | 188 | 0% |
-| RestAPI+Implementation.swift | 19 | 22 | 86% |
-| MockDataLoader.swift | 7 | 8 | 88% |
-| RestAPI.swift | 4 | 4 | 100% |
-| HomePage.swift | 0 | 143 | 0% |
-| RestAPITests.swift | 52 | 56 | 93% |
-| SearchViewModel.swift | 26 | 26 | 100% |
-| SearchResultCard.swift | 0 | 106 | 0% |
-| MockRestAPI.swift | 5 | 29 | 17% |
-| Model.swift | 3 | 44 | 7% |
-| SearchContentUnavailableView.swift | 0 | 29 | 0% |
-| WeatherApp.swift | 0 | 8 | 0% |
----
-
+## Weather app images
 | No location selected | Searching loading | Location details | Error handler
 | ---- | ---- | ---- | ---- |
 | <img src="https://github.com/user-attachments/assets/99563261-6435-4550-8054-68d6ea7c6792" alt="No city selected" width="200"> | <img src="https://github.com/user-attachments/assets/2bbd802d-576e-4c8c-b154-0c0eb443ffbf" alt="Search loading" width="200"> | <img src="https://github.com/user-attachments/assets/14c83383-b927-49a0-b985-ac94d0411175" alt="Location details" width="200"> | <img src="https://github.com/user-attachments/assets/fdf4cc61-d0d8-4be5-bacd-d780d2daf7a0" alt="Error handler" width="200"> |
@@ -140,3 +53,5 @@ graph TD;
 4. Run the App
     - Select the desired simulator or device in Xcode.
     - Press the Run button (▶️) or use the shortcut Cmd + R to build and launch the app.
+
+## Test Coverage
