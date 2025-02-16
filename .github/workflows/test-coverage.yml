@@ -71,8 +71,8 @@ jobs:
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          git config --global user.name "mrugama"
-          git config --global user.email "mrugama@gmail.com"
+          git config --global user.name "mrugama"  # Use YOUR GitHub username
+          git config --global user.email "mrugama@gmail.com"  # Optional: Use your GitHub email
           git remote set-url origin https://mrugama:${GH_PAT}@github.com/mrugama/Weather.git
           git add coverage/coverage.json
           git commit -m "Update test coverage report" || exit 0
