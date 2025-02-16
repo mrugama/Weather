@@ -86,7 +86,11 @@ jobs:
           echo "" >> coverage_section.md
 
           # Remove the existing "Test Coverage" section from README
-          sed '/## Test Coverage/ , /---/d' README.md > README.tmp
+          awk '
+          BEGIN {delete = 0}
+          /^## Test Coverage/ {delete = 1; next}  # Start deleting at "## Test Coverage"
+          /^## / && delete {delete = 0}  # Stop deleting at the next header
+          !delete' README.md > README.tmp
 
           # Add the new "Test Coverage" section content from coverage_section.md
           cat coverage_section.md >> README.tmp
