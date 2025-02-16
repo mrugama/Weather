@@ -54,13 +54,6 @@ graph TD;
     - Select the desired simulator or device in Xcode.
     - Press the Run button (▶️) or use the shortcut Cmd + R to build and launch the app.
 
-## Test Coverage
-[![Test Coverage](https://img.shields.io/badge/Test%20Coverage-21%25-green?style=flat&logo=swift&logoColor=white)](https://github.com/mrugama/Weather/actions)
-
-### 📊 General Coverage
-> **Total Test Coverage:** `21%`
-
----
 ### 📄 File-wise Coverage Breakdown
 | File | Covered Lines | Executable Lines | Coverage |
 |------|--------------|-----------------|----------|
@@ -96,5 +89,48 @@ graph TD;
 | Model.swift | 3 | 44 | 7%
 | SearchContentUnavailableView.swift | 0 | 29 | 0%
 | WeatherApp.swift | 0 | 8 | 0%
+---
+
+## Test Coverage
+
+### 📊 General Coverage
+[![Test Coverage](https://img.shields.io/badge/Total%20Test%20Coverage-21%25-green?style=flat&logo=swift&logoColor=white)](https://github.com/mrugama/Weather/actions)
+
+---
+### 📄 File-wise Coverage Breakdown
+| File | Covered Lines | Executable Lines | Coverage | Badge |
+|------|--------------|-----------------|----------|-------|
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
+| 0.0 | 0.1 | 0.2 | 0.3% | 0.4 |
 ---
 
