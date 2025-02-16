@@ -60,20 +60,32 @@ jobs:
         run: |
           mv coverage/coverage.json coverage.json
 
-      - name: Debug Git Authentication
-        env:
-          GH_PAT: ${{ secrets.GH_PAT }}
+      - name: Extract and format coverage data for badge
         run: |
-          git remote -v
-          git config --list
-          git ls-remote https://x-access-token:${GH_PAT}@github.com/mrugama/Weather.git
+          # Extract coverage percentage
+          COVERAGE=$(xcrun xccov view --report TestResults.xcresult | awk '/lines\./ { print $3 }' | sed 's/%//')
+
+          # Determine badge color dynamically
+          if (( $(echo "$COVERAGE > 80" | bc -l) )); then
+            COLOR="green"
+          elif (( $(echo "$COVERAGE > 50" | bc -l) )); then
+            COLOR="yellow"
+          else
+            COLOR="red"
+          fi
+
+          # Create JSON badge file
+          echo "{ \"schemaVersion\": 1, \"label\": \"Test Coverage\", \"message\": \"${COVERAGE}%\", \"color\": \"${COLOR}\" }" > coverage.json
+
+          # Debug output
+          cat coverage.json
 
       - name: Commit and push coverage report
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
         run: |
-          git config --global user.name "mrugama"  # Use YOUR GitHub username
-          git config --global user.email "mrugama@gmail.com"  # Optional: Use your GitHub email
+          git config --global user.name "mrugama"
+          git config --global user.email "mrugama@gmail.com"
           git remote set-url origin https://mrugama:${GH_PAT}@github.com/mrugama/Weather.git
           git add coverage.json
           git commit -m "Update test coverage report" || exit 0
