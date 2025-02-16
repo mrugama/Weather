@@ -76,12 +76,11 @@ jobs:
           echo "" >> coverage_section.md
           echo "---" >> coverage_section.md
           echo "### 📄 File-wise Coverage Breakdown" >> coverage_section.md
-          echo "| File | Covered Lines | Executable Lines | Coverage | Badge |" >> coverage_section.md
-          echo "|------|--------------|-----------------|----------|-------|" >> coverage_section.md
+          echo "| File | Covered Lines | Executable Lines | Coverage |" >> coverage_section.md
+          echo "|------|--------------|-----------------|----------|" >> coverage_section.md
 
           # Loop through each file in coverage.json and add to table
-          jq -r '.targets[].files[] | "| \(.name) | \(.coveredLines) | \(.executableLines) | \((.lineCoverage * 100) | round)% | if (.lineCoverage * 100) < 25 then ![Need attention](https://img.shields.io/badge/Need%20attention-red) elif (.lineCoverage * 100) >= 25 and (.lineCoverage * 100) < 80 then "![Good job](https://img.shields.io/badge/Good%20job%21%2C%20keep%20working-yellow)"
-              else ![Excellent job](https://img.shields.io/badge/Excellent%20job%21%21%21-green) end' coverage.json >> coverage_section.md
+          jq -r '.targets[].files[] | "| \(.name) | \(.coveredLines) | \(.executableLines) | \((.lineCoverage * 100) | round)%"' coverage.json >> coverage_section.md
 
           echo "---" >> coverage_section.md
           echo "" >> coverage_section.md
