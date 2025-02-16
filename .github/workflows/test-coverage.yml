@@ -63,7 +63,7 @@ jobs:
       - name: Update README with Test Coverage
         run: |
           # Extract total coverage and format the percentage to 2 decimals
-          TOTAL_COVERAGE=$(jq -r '.coveredLines / .executableLines * 100 | round | tostring' coverage.json)
+          TOTAL_COVERAGE=$(jq -r '.coveredLines / .executableLines * 100 | round / 1' coverage.json)
 
           # Create badge for total coverage
           COVERAGE_BADGE_URL="https://img.shields.io/badge/Test%20Coverage-${TOTAL_COVERAGE}%25-green?style=flat&logo=swift&logoColor=white"
@@ -86,15 +86,14 @@ jobs:
           echo "---" >> coverage_section.md
           echo "" >> coverage_section.md
 
-          # Replace only the Test Coverage section in README (without duplicating)
-          awk '
-            /## Test Coverage/ { 
-              flag = 1; 
-              print; 
-              system("cat coverage_section.md"); 
-              next 
-            } 
-            !/^## / || !flag' README.md > README.tmp && mv README.tmp README.md
+          # Remove the existing "Test Coverage" section from README
+          sed '/## Test Coverage/ , /---/d' README.md > README.tmp
+
+          # Add the new "Test Coverage" section content from coverage_section.md
+          cat coverage_section.md >> README.tmp
+
+          # Move the updated file back to README.md
+          mv README.tmp README.md
 
           # Clean up temporary file
           rm coverage_section.md
