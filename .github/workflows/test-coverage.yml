@@ -10,6 +10,8 @@ on:
 jobs:
   test:
     runs-on: macOS-15
+    permissions:
+      contents: write
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
