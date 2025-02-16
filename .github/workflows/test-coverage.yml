@@ -28,6 +28,12 @@ jobs:
       - name: Resolve Swift Package Dependencies
         run: xcodebuild -resolvePackageDependencies
 
+      - name: Find available iPhone simulator
+        run: |
+          DEVICE_ID=$(xcrun simctl list devices available | grep "iPhone 15" | grep "(OS 17.5" | awk -F '[()]' '{print $2}')
+          echo "Using simulator: $DEVICE_ID"
+          echo "SIMULATOR_ID=$DEVICE_ID" >> $GITHUB_ENV
+
       - name: Run tests with coverage
         run: |
           xcodebuild test \
