@@ -14,14 +14,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Show available Xcode versions
-        run: ls /Applications | grep Xcode
-
       - name: Use latest available Xcode version
         run: sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
-
-      - name: Show available schemes
-        run: xcodebuild -list
 
       - name: Resolve Swift Package Dependencies
         run: xcodebuild -resolvePackageDependencies
@@ -64,6 +58,14 @@ jobs:
         run: |
           mkdir -p coverage
           xcrun xccov view --report --json TestResults.xcresult > coverage/coverage.json
+
+      - name: Debug Git Authentication
+        env:
+          GH_PAT: ${{ secrets.GH_PAT }}
+        run: |
+          git remote -v
+          git config --list
+          git ls-remote https://x-access-token:${GH_PAT}@github.com/mrugama/Weather.git
 
       - name: Commit and push coverage report
         env:
