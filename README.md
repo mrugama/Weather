@@ -14,9 +14,52 @@ The weather iOS app provides free access to weather and geo data. This is a samp
 ![Frameworks](https://img.shields.io/badge/Framework-SwiftPM-informational?style=flat&logo=Framework&logoColor=white&color=2bbc8a)
 
 ## Test Coverage
+## Test Coverage
+[![Test Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/mrugama/Weather/main/coverage.json)](https://github.com/mrugama/Weather/actions)
+
+### 📊 General Coverage
+> **Total Test Coverage:** `21.07%`
+
+---
+### 📄 File-wise Coverage Breakdown
+| File | Covered Lines | Executable Lines | Coverage |
+|------|--------------|-----------------|----------|
+| EndpointManager.swift | 4 | 4 | 100% |
+| EndpointManager+Implementation.swift | 40 | 50 | 80% |
+| MockEndpointManager.swift | 14 | 14 | 100% |
+| EndpointManagerTests.swift | 22 | 22 | 100% |
+| LandingPage.swift | 0 | 9 | 0% |
+| SearchViewModelTests.swift | 33 | 33 | 100% |
+| SearchResultContent.swift | 0 | 188 | 0% |
+| MockDataLoader.swift | 7 | 8 | 88% |
+| HomePage.swift | 0 | 143 | 0% |
+| SearchViewModel.swift | 26 | 26 | 100% |
+| SearchResultCard.swift | 0 | 106 | 0% |
+| MockRestAPI.swift | 5 | 29 | 17% |
+| Model.swift | 3 | 44 | 7% |
+| SearchContentUnavailableView.swift | 0 | 29 | 0% |
+| NetworkError.swift | 0 | 8 | 0% |
+| MockDataLoader.swift | 7 | 8 | 88% |
+| DataLoader+Implementation.swift | 0 | 18 | 0% |
+| DataLoaderService.swift | 0 | 4 | 0% |
+| DataLoaderTests.swift | 27 | 28 | 96% |
+| LandingPage.swift | 0 | 9 | 0% |
+| SearchResultContent.swift | 0 | 188 | 0% |
+| RestAPI+Implementation.swift | 19 | 22 | 86% |
+| MockDataLoader.swift | 7 | 8 | 88% |
+| RestAPI.swift | 4 | 4 | 100% |
+| HomePage.swift | 0 | 143 | 0% |
+| RestAPITests.swift | 52 | 56 | 93% |
+| SearchViewModel.swift | 26 | 26 | 100% |
+| SearchResultCard.swift | 0 | 106 | 0% |
+| MockRestAPI.swift | 5 | 29 | 17% |
+| Model.swift | 3 | 44 | 7% |
+| SearchContentUnavailableView.swift | 0 | 29 | 0% |
+| WeatherApp.swift | 0 | 8 | 0% |
+---
+
 [![Test Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/mrugama/Weather/master/coverage.json)](https://github.com/mrugama/Weather/actions)
 
-## App architecture
 The weather-tracking app has a single feature component. `Landing Page` is a self-contained feature component with some module dependencies as shown in the graph below.
 ```mermaid
 graph TD;
@@ -29,12 +72,10 @@ graph TD;
     Networking-->WTLogging;
     LandingPage-->DecoratorUI;
 ```
-## App states
 | No location selected | Searching loading | Location details | Error handler
 | ---- | ---- | ---- | ---- |
 | <img src="https://github.com/user-attachments/assets/99563261-6435-4550-8054-68d6ea7c6792" alt="No city selected" width="200"> | <img src="https://github.com/user-attachments/assets/2bbd802d-576e-4c8c-b154-0c0eb443ffbf" alt="Search loading" width="200"> | <img src="https://github.com/user-attachments/assets/14c83383-b927-49a0-b985-ac94d0411175" alt="Location details" width="200"> | <img src="https://github.com/user-attachments/assets/fdf4cc61-d0d8-4be5-bacd-d780d2daf7a0" alt="Error handler" width="200"> |
 
-## Card designs
 | Searching result | Details |
 | ---- | ---- |
 | <img src="https://github.com/user-attachments/assets/00539ad5-72c0-4c66-ba94-926681db604f" alt="Searching result" width="200"> | <img src="https://github.com/user-attachments/assets/125e86ad-5a79-4e09-a6e1-09fb0018c9c5" alt="Location details" width="200"> |
