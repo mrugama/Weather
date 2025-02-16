@@ -19,14 +19,19 @@ jobs:
       - name: Use latest available Xcode version
         run: sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
 
-      - name: Print Xcode version
-        run: xcodebuild -version
-
       - name: Show available schemes
         run: xcodebuild -list
 
       - name: Resolve Swift Package Dependencies
         run: xcodebuild -resolvePackageDependencies
+
+      - name: Build Tests
+        run: |
+          xcodebuild build \
+            -project Weather.xcodeproj \
+            -scheme NetworkingTests \
+            -destination 'platform=iOS Simulator,name=iPhone 16' \
+            | tee xcodebuild.log
 
       - name: Run tests with coverage
         run: |
