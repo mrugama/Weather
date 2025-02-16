@@ -56,10 +56,9 @@ jobs:
             exit 1
           fi
 
-      - name: Extract coverage data
+      - name: Move coverage.json to repo root
         run: |
-          mkdir -p coverage
-          xcrun xccov view --report --json TestResults.xcresult > coverage/coverage.json
+          mv coverage/coverage.json coverage.json
 
       - name: Debug Git Authentication
         env:
@@ -76,6 +75,6 @@ jobs:
           git config --global user.name "mrugama"  # Use YOUR GitHub username
           git config --global user.email "mrugama@gmail.com"  # Optional: Use your GitHub email
           git remote set-url origin https://mrugama:${GH_PAT}@github.com/mrugama/Weather.git
-          git add coverage/coverage.json
+          git add coverage.json
           git commit -m "Update test coverage report" || exit 0
           git push origin HEAD:master
