@@ -22,6 +22,12 @@ jobs:
       - name: Print Xcode version
         run: xcodebuild -version
 
+      - name: Show available schemes
+        run: xcodebuild -list
+
+      - name: Resolve Swift Package Dependencies
+        run: xcodebuild -resolvePackageDependencies
+
       - name: Run tests with coverage
         run: |
           xcodebuild test \
