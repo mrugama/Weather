@@ -67,10 +67,11 @@ jobs:
 
       - name: Commit and push coverage report
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_PAT: ${{ secrets.GH_PAT }}
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${GH_PAT}@github.com/mrugama/Weather.git
           git add coverage/coverage.json
           git commit -m "Update test coverage report" || exit 0
-          git push https://x-access-token:${GITHUB_TOKEN}@github.com/mrugama/Weather.git HEAD:master
+          git push origin HEAD:master
