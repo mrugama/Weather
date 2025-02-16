@@ -58,43 +58,43 @@ graph TD;
 ## Test Coverage
 
 ### 📊 General Coverage
-[![Test Coverage](https://img.shields.io/badge/Coverage-21%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention)](https://github.com/mrugama/Weather/actions)
+![Test Coverage](https://img.shields.io/badge/Coverage-21%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention)
 
 ---
 ### 📄 File-wise Coverage Breakdown
 | File | Covered Lines | Executable Lines | Coverage |
 |------|--------------|-----------------|----------|
-| EndpointManager.swift | 4 | 4 | [![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent)](https://github.com/mrugama/Weather/actions) |
-| EndpointManager+Implementation.swift | 40 | 50 | [![Coverage](https://img.shields.io/badge/Coverage-80%25-green?style=flat&logo=swift&logoColor=white&label=Excellent)](https://github.com/mrugama/Weather/actions) |
-| MockEndpointManager.swift | 14 | 14 | [![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent)](https://github.com/mrugama/Weather/actions) |
-| EndpointManagerTests.swift | 22 | 22 | [![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent)](https://github.com/mrugama/Weather/actions) |
-| LandingPage.swift | 0 | 9 | [![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention)](https://github.com/mrugama/Weather/actions) |
-| SearchViewModelTests.swift | 33 | 33 | [![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent)](https://github.com/mrugama/Weather/actions) |
-| SearchResultContent.swift | 0 | 188 | [![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention)](https://github.com/mrugama/Weather/actions) |
-| MockDataLoader.swift | 7 | 8 | [![Coverage](https://img.shields.io/badge/Coverage-88%25-green?style=flat&logo=swift&logoColor=white&label=Excellent)](https://github.com/mrugama/Weather/actions) |
-| HomePage.swift | 0 | 143 | [![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention)](https://github.com/mrugama/Weather/actions) |
-| SearchViewModel.swift | 26 | 26 | [![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent)](https://github.com/mrugama/Weather/actions) |
-| SearchResultCard.swift | 0 | 106 | [![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention)](https://github.com/mrugama/Weather/actions) |
-| MockRestAPI.swift | 5 | 29 | [![Coverage](https://img.shields.io/badge/Coverage-17%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention)](https://github.com/mrugama/Weather/actions) |
-| Model.swift | 3 | 44 | [![Coverage](https://img.shields.io/badge/Coverage-7%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention)](https://github.com/mrugama/Weather/actions) |
-| SearchContentUnavailableView.swift | 0 | 29 | [![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention)](https://github.com/mrugama/Weather/actions) |
-| NetworkError.swift | 0 | 8 | [![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention)](https://github.com/mrugama/Weather/actions) |
-| MockDataLoader.swift | 7 | 8 | [![Coverage](https://img.shields.io/badge/Coverage-88%25-green?style=flat&logo=swift&logoColor=white&label=Excellent)](https://github.com/mrugama/Weather/actions) |
-| DataLoader+Implementation.swift | 0 | 18 | [![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention)](https://github.com/mrugama/Weather/actions) |
-| DataLoaderService.swift | 0 | 4 | [![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention)](https://github.com/mrugama/Weather/actions) |
-| DataLoaderTests.swift | 27 | 28 | [![Coverage](https://img.shields.io/badge/Coverage-96%25-green?style=flat&logo=swift&logoColor=white&label=Excellent)](https://github.com/mrugama/Weather/actions) |
-| LandingPage.swift | 0 | 9 | [![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention)](https://github.com/mrugama/Weather/actions) |
-| SearchResultContent.swift | 0 | 188 | [![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention)](https://github.com/mrugama/Weather/actions) |
-| RestAPI+Implementation.swift | 19 | 22 | [![Coverage](https://img.shields.io/badge/Coverage-86%25-green?style=flat&logo=swift&logoColor=white&label=Excellent)](https://github.com/mrugama/Weather/actions) |
-| MockDataLoader.swift | 7 | 8 | [![Coverage](https://img.shields.io/badge/Coverage-88%25-green?style=flat&logo=swift&logoColor=white&label=Excellent)](https://github.com/mrugama/Weather/actions) |
-| RestAPI.swift | 4 | 4 | [![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent)](https://github.com/mrugama/Weather/actions) |
-| HomePage.swift | 0 | 143 | [![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention)](https://github.com/mrugama/Weather/actions) |
-| RestAPITests.swift | 52 | 56 | [![Coverage](https://img.shields.io/badge/Coverage-93%25-green?style=flat&logo=swift&logoColor=white&label=Excellent)](https://github.com/mrugama/Weather/actions) |
-| SearchViewModel.swift | 26 | 26 | [![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent)](https://github.com/mrugama/Weather/actions) |
-| SearchResultCard.swift | 0 | 106 | [![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention)](https://github.com/mrugama/Weather/actions) |
-| MockRestAPI.swift | 5 | 29 | [![Coverage](https://img.shields.io/badge/Coverage-17%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention)](https://github.com/mrugama/Weather/actions) |
-| Model.swift | 3 | 44 | [![Coverage](https://img.shields.io/badge/Coverage-7%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention)](https://github.com/mrugama/Weather/actions) |
-| SearchContentUnavailableView.swift | 0 | 29 | [![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention)](https://github.com/mrugama/Weather/actions) |
-| WeatherApp.swift | 0 | 8 | [![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention)](https://github.com/mrugama/Weather/actions) |
+| EndpointManager.swift | 4 | 4 | ![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
+| EndpointManager+Implementation.swift | 40 | 50 | ![Coverage](https://img.shields.io/badge/Coverage-80%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
+| MockEndpointManager.swift | 14 | 14 | ![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
+| EndpointManagerTests.swift | 22 | 22 | ![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
+| LandingPage.swift | 0 | 9 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| SearchViewModelTests.swift | 33 | 33 | ![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
+| SearchResultContent.swift | 0 | 188 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| MockDataLoader.swift | 7 | 8 | ![Coverage](https://img.shields.io/badge/Coverage-88%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
+| HomePage.swift | 0 | 143 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| SearchViewModel.swift | 26 | 26 | ![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
+| SearchResultCard.swift | 0 | 106 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| MockRestAPI.swift | 5 | 29 | ![Coverage](https://img.shields.io/badge/Coverage-17%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| Model.swift | 3 | 44 | ![Coverage](https://img.shields.io/badge/Coverage-7%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| SearchContentUnavailableView.swift | 0 | 29 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| NetworkError.swift | 0 | 8 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| MockDataLoader.swift | 7 | 8 | ![Coverage](https://img.shields.io/badge/Coverage-88%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
+| DataLoader+Implementation.swift | 0 | 18 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| DataLoaderService.swift | 0 | 4 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| DataLoaderTests.swift | 27 | 28 | ![Coverage](https://img.shields.io/badge/Coverage-96%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
+| LandingPage.swift | 0 | 9 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| SearchResultContent.swift | 0 | 188 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| RestAPI+Implementation.swift | 19 | 22 | ![Coverage](https://img.shields.io/badge/Coverage-86%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
+| MockDataLoader.swift | 7 | 8 | ![Coverage](https://img.shields.io/badge/Coverage-88%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
+| RestAPI.swift | 4 | 4 | ![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
+| HomePage.swift | 0 | 143 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| RestAPITests.swift | 52 | 56 | ![Coverage](https://img.shields.io/badge/Coverage-93%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
+| SearchViewModel.swift | 26 | 26 | ![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
+| SearchResultCard.swift | 0 | 106 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| MockRestAPI.swift | 5 | 29 | ![Coverage](https://img.shields.io/badge/Coverage-17%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| Model.swift | 3 | 44 | ![Coverage](https://img.shields.io/badge/Coverage-7%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| SearchContentUnavailableView.swift | 0 | 29 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| WeatherApp.swift | 0 | 8 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
 ---
 
