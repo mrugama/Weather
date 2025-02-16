@@ -14,7 +14,7 @@ The weather iOS app provides free access to weather and geo data. This is a samp
 ![Frameworks](https://img.shields.io/badge/Framework-SwiftPM-informational?style=flat&logo=Framework&logoColor=white&color=2bbc8a)
 
 ## Test Coverage
-[![Test Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/mrugama/Weather/main/coverage.json)](https://github.com/mrugama/Weather/actions)
+[![Test Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/mrugama/Weather/master/coverage.json)](https://github.com/mrugama/Weather/actions)
 
 ## App architecture
 The weather-tracking app has a single feature component. `Landing Page` is a self-contained feature component with some module dependencies as shown in the graph below.
