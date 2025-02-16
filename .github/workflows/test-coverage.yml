@@ -33,7 +33,7 @@ jobs:
           xcodebuild test \
             -project Weather.xcodeproj \
             -scheme NetworkingTests \
-            -destination 'platform=iOS Simulator,name=iPhone 15' \
+            -destination 'platform=iOS Simulator, id=D0C1992C-B94E-4F8E-9BEF-5C8B1DBF6A48' \
             -enableCodeCoverage YES \
             -resultBundlePath TestResults.xcresult | tee xcodebuild.log
         continue-on-error: true
