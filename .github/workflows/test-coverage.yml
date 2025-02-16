@@ -62,22 +62,37 @@ jobs:
 
       - name: Update README with Test Coverage
         run: |
-          # Extract total coverage and format the percentage to 2 decimals
-          TOTAL_COVERAGE=$(jq -r '.coveredLines / .executableLines * 100 | round / 1' coverage.json)
-          # Create badge for total coverage
-          COVERAGE_BADGE_URL="https://img.shields.io/badge/Total%20Test%20Coverage-${TOTAL_COVERAGE}%25-green?style=flat&logo=swift&logoColor=white"
+          # Function to generate dynamic badge
+          generate_badge() {
+            local coverage=$1
+            local color
+            local text
+            if (( $(echo "$coverage < 25" | bc -l) )); then
+              color="red"
+              text="Needs%20Attention"
+            elif (( $(echo "$coverage >= 25 && $coverage < 80" | bc -l) )); then
+              color="yellow"
+              text="Good%20Job"
+            else
+              color="green"
+              text="Excellent"
+            fi
+            echo "https://img.shields.io/badge/Coverage-${coverage}%25-${color}?style=flat&logo=swift&logoColor=white&label=${text}"
+          }
+
           # Generate coverage section content
           echo "## Test Coverage" > coverage_section.md
           echo "" >> coverage_section.md
           echo "### 📊 General Coverage" >> coverage_section.md
+          TOTAL_COVERAGE=$(jq -r '.coveredLines / .executableLines * 100 | round / 1' coverage.json)
+          COVERAGE_BADGE_URL=$(generate_badge $TOTAL_COVERAGE)
           echo "[![Test Coverage]($COVERAGE_BADGE_URL)](https://github.com/mrugama/Weather/actions)" >> coverage_section.md
           echo "" >> coverage_section.md
           echo "---" >> coverage_section.md
-          echo "### 📄 File-wise Coverage Breakdown" >> coverage_section.md
-          echo "| File | Covered Lines | Executable Lines | Coverage |" >> coverage_section.md
-          echo "|------|--------------|-----------------|----------|" >> coverage_section.md
-          # Loop through each file in coverage.json and add to table
-          jq -r '.targets[].files[] | "| \(.name) | \(.coveredLines) | \(.executableLines) | \((.lineCoverage * 100) | round)%"' coverage.json >> coverage_section.md
+
+          # Group files by target and generate coverage breakdown
+          echo "### 📄 File-wise Coverage Breakdown by Target" >> coverage_section.md
+          jq -r '.targets[] | "### \(.name)\n| File | Covered Lines | Executable Lines | Coverage |\n|------|--------------|-----------------|----------|\n" + (.files[] | "| \(.name) | \(.coveredLines) | \(.executableLines) | [![Coverage]($(generate_badge \((.lineCoverage * 100) | round))](https://github.com/mrugama/Weather/actions) |") + "\n"' coverage.json >> coverage_section.md
           echo "---" >> coverage_section.md
           echo "" >> coverage_section.md
 
