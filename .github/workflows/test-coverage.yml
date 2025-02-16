@@ -64,10 +64,8 @@ jobs:
         run: |
           # Extract total coverage and format the percentage to 2 decimals
           TOTAL_COVERAGE=$(jq -r '.coveredLines / .executableLines * 100 | round / 1' coverage.json)
-
           # Create badge for total coverage
           COVERAGE_BADGE_URL="https://img.shields.io/badge/Total%20Test%20Coverage-${TOTAL_COVERAGE}%25-green?style=flat&logo=swift&logoColor=white"
-
           # Generate coverage section content
           echo "## Test Coverage" > coverage_section.md
           echo "" >> coverage_section.md
@@ -78,17 +76,18 @@ jobs:
           echo "### 📄 File-wise Coverage Breakdown" >> coverage_section.md
           echo "| File | Covered Lines | Executable Lines | Coverage |" >> coverage_section.md
           echo "|------|--------------|-----------------|----------|" >> coverage_section.md
-
           # Loop through each file in coverage.json and add to table
           jq -r '.targets[].files[] | "| \(.name) | \(.coveredLines) | \(.executableLines) | \((.lineCoverage * 100) | round)%"' coverage.json >> coverage_section.md
-
           echo "---" >> coverage_section.md
           echo "" >> coverage_section.md
 
           # Remove the entire "Test Coverage" section (including content) from README
           awk '
-          /^## Test Coverage$/,/^## / { if (!/^## /) next } 
-          { print }' README.md > README.tmp
+          /^## Test Coverage$/,/^## [^Test Coverage]/ {
+            if (/^## Test Coverage$/) { skip = 1 }
+            if (/^## [^Test Coverage]/) { skip = 0 }
+            if (!skip) print
+          }' README.md > README.tmp
 
           # Add the new "Test Coverage" section content from coverage_section.md
           cat coverage_section.md >> README.tmp
