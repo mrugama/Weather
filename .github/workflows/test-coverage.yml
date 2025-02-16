@@ -60,25 +60,33 @@ jobs:
         run: |
           mv coverage/coverage.json coverage.json
 
-      - name: Extract and format coverage data for badge
+      - name: Update README with Test Coverage
         run: |
-          # Extract coverage percentage
-          COVERAGE=$(xcrun xccov view --report TestResults.xcresult | awk '/lines\./ { print $3 }' | sed 's/%//')
+          # Extract total coverage
+          TOTAL_COVERAGE=$(jq '.coveredLines / .executableLines * 100' coverage.json)
+          
+          # Generate coverage section
+          echo "## Test Coverage" > coverage_section.md
+          echo "[![Test Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/mrugama/Weather/main/coverage.json)](https://github.com/mrugama/Weather/actions)" >> coverage_section.md
+          echo "" >> coverage_section.md
+          echo "### 📊 General Coverage" >> coverage_section.md
+          echo "> **Total Test Coverage:** \`$(printf "%.2f" $TOTAL_COVERAGE)%\`" >> coverage_section.md
+          echo "" >> coverage_section.md
+          echo "---" >> coverage_section.md
+          echo "### 📄 File-wise Coverage Breakdown" >> coverage_section.md
+          echo "| File | Covered Lines | Executable Lines | Coverage |" >> coverage_section.md
+          echo "|------|--------------|-----------------|----------|" >> coverage_section.md
 
-          # Determine badge color dynamically
-          if (( $(echo "$COVERAGE > 80" | bc -l) )); then
-            COLOR="green"
-          elif (( $(echo "$COVERAGE > 50" | bc -l) )); then
-            COLOR="yellow"
-          else
-            COLOR="red"
-          fi
+          # Loop through each file in coverage.json and add to table
+          jq -r '.targets[].files[] | "| \(.name) | \(.coveredLines) | \(.executableLines) | \((.lineCoverage * 100) | tostring)%" |"' coverage.json >> coverage_section.md
 
-          # Create JSON badge file
-          echo "{ \"schemaVersion\": 1, \"label\": \"Test Coverage\", \"message\": \"${COVERAGE}%\", \"color\": \"${COLOR}\" }" > coverage.json
+          echo "---" >> coverage_section.md
+          echo "" >> coverage_section.md
 
-          # Debug output
-          cat coverage.json
+          # Replace only the Test Coverage section in README
+          awk '/## Test Coverage/{flag=1; print; system("cat coverage_section.md"); next} !/^## / || !flag' README.md > README.tmp && mv README.tmp README.md
+
+          rm coverage_section.md
 
       - name: Commit and push coverage report
         env:
@@ -88,5 +96,6 @@ jobs:
           git config --global user.email "mrugama@gmail.com"
           git remote set-url origin https://mrugama:${GH_PAT}@github.com/mrugama/Weather.git
           git add coverage.json
+          git add README.md
           git commit -m "Update test coverage report" || exit 0
           git push origin HEAD:master
