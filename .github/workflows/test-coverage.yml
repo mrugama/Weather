@@ -81,13 +81,12 @@ jobs:
           echo "---" >> coverage_section.md
           echo "" >> coverage_section.md
 
-          # Remove the entire "Test Coverage" section (including content) from README
+          # Remove ONLY the "Test Coverage" section and its subsections from README
           awk '
-          /^## Test Coverage$/,/^## [^Test Coverage]/ {
-            if (/^## Test Coverage$/) { skip = 1 }
-            if (/^## [^Test Coverage]/) { skip = 0 }
-            if (!skip) print
-          }' README.md > README.tmp
+          /^## Test Coverage$/ { skip = 1 }
+          /^## / && !/^## Test Coverage$/ { skip = 0 }
+          !skip { print }
+          ' README.md > README.tmp
 
           # Add the new "Test Coverage" section content from coverage_section.md
           cat coverage_section.md >> README.tmp
