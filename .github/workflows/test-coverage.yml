@@ -63,8 +63,8 @@ jobs:
       - name: Update README with Test Coverage
         run: |
           # Extract total coverage
-          TOTAL_COVERAGE=$(jq '.coveredLines / .executableLines * 100' coverage.json)
-          
+          TOTAL_COVERAGE=$(jq -r '.coveredLines / .executableLines * 100 | tostring' coverage.json)
+
           # Generate coverage section
           echo "## Test Coverage" > coverage_section.md
           echo "[![Test Coverage](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/mrugama/Weather/main/coverage.json)](https://github.com/mrugama/Weather/actions)" >> coverage_section.md
@@ -78,7 +78,7 @@ jobs:
           echo "|------|--------------|-----------------|----------|" >> coverage_section.md
 
           # Loop through each file in coverage.json and add to table
-          jq -r '.targets[].files[] | "| \(.name) | \(.coveredLines) | \(.executableLines) | \((.lineCoverage * 100) | tostring)%" |"' coverage.json >> coverage_section.md
+          jq -r '.targets[].files[] | "| \(.name) | \(.coveredLines) | \(.executableLines) | \(.lineCoverage * 100 | tonumber | round)% |"' coverage.json >> coverage_section.md
 
           echo "---" >> coverage_section.md
           echo "" >> coverage_section.md
