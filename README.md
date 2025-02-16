@@ -61,166 +61,40 @@ graph TD;
 [![Test Coverage](https://img.shields.io/badge/Coverage-21%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention)](https://github.com/mrugama/Weather/actions)
 
 ---
-### 📄 File-wise Coverage Breakdown by Target
-### EndpointManagerTests
+### 📄 File-wise Coverage Breakdown
 | File | Covered Lines | Executable Lines | Coverage |
 |------|--------------|-----------------|----------|
 | EndpointManager.swift | 4 | 4 | [![Coverage]($(generate_badge 100)](https://github.com/mrugama/Weather/actions) |
-
-### EndpointManagerTests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | EndpointManager+Implementation.swift | 40 | 50 | [![Coverage]($(generate_badge 80)](https://github.com/mrugama/Weather/actions) |
-
-### EndpointManagerTests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | MockEndpointManager.swift | 14 | 14 | [![Coverage]($(generate_badge 100)](https://github.com/mrugama/Weather/actions) |
-
-### EndpointManagerTests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | EndpointManagerTests.swift | 22 | 22 | [![Coverage]($(generate_badge 100)](https://github.com/mrugama/Weather/actions) |
-
-### LandingPageTests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | LandingPage.swift | 0 | 9 | [![Coverage]($(generate_badge 0)](https://github.com/mrugama/Weather/actions) |
-
-### LandingPageTests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | SearchViewModelTests.swift | 33 | 33 | [![Coverage]($(generate_badge 100)](https://github.com/mrugama/Weather/actions) |
-
-### LandingPageTests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | SearchResultContent.swift | 0 | 188 | [![Coverage]($(generate_badge 0)](https://github.com/mrugama/Weather/actions) |
-
-### LandingPageTests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | MockDataLoader.swift | 7 | 8 | [![Coverage]($(generate_badge 88)](https://github.com/mrugama/Weather/actions) |
-
-### LandingPageTests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | HomePage.swift | 0 | 143 | [![Coverage]($(generate_badge 0)](https://github.com/mrugama/Weather/actions) |
-
-### LandingPageTests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | SearchViewModel.swift | 26 | 26 | [![Coverage]($(generate_badge 100)](https://github.com/mrugama/Weather/actions) |
-
-### LandingPageTests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | SearchResultCard.swift | 0 | 106 | [![Coverage]($(generate_badge 0)](https://github.com/mrugama/Weather/actions) |
-
-### LandingPageTests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | MockRestAPI.swift | 5 | 29 | [![Coverage]($(generate_badge 17)](https://github.com/mrugama/Weather/actions) |
-
-### LandingPageTests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | Model.swift | 3 | 44 | [![Coverage]($(generate_badge 7)](https://github.com/mrugama/Weather/actions) |
-
-### LandingPageTests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | SearchContentUnavailableView.swift | 0 | 29 | [![Coverage]($(generate_badge 0)](https://github.com/mrugama/Weather/actions) |
-
-### NetworkingTests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | NetworkError.swift | 0 | 8 | [![Coverage]($(generate_badge 0)](https://github.com/mrugama/Weather/actions) |
-
-### NetworkingTests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | MockDataLoader.swift | 7 | 8 | [![Coverage]($(generate_badge 88)](https://github.com/mrugama/Weather/actions) |
-
-### NetworkingTests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | DataLoader+Implementation.swift | 0 | 18 | [![Coverage]($(generate_badge 0)](https://github.com/mrugama/Weather/actions) |
-
-### NetworkingTests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | DataLoaderService.swift | 0 | 4 | [![Coverage]($(generate_badge 0)](https://github.com/mrugama/Weather/actions) |
-
-### NetworkingTests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | DataLoaderTests.swift | 27 | 28 | [![Coverage]($(generate_badge 96)](https://github.com/mrugama/Weather/actions) |
-
-### RestAPITests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | LandingPage.swift | 0 | 9 | [![Coverage]($(generate_badge 0)](https://github.com/mrugama/Weather/actions) |
-
-### RestAPITests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | SearchResultContent.swift | 0 | 188 | [![Coverage]($(generate_badge 0)](https://github.com/mrugama/Weather/actions) |
-
-### RestAPITests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | RestAPI+Implementation.swift | 19 | 22 | [![Coverage]($(generate_badge 86)](https://github.com/mrugama/Weather/actions) |
-
-### RestAPITests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | MockDataLoader.swift | 7 | 8 | [![Coverage]($(generate_badge 88)](https://github.com/mrugama/Weather/actions) |
-
-### RestAPITests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | RestAPI.swift | 4 | 4 | [![Coverage]($(generate_badge 100)](https://github.com/mrugama/Weather/actions) |
-
-### RestAPITests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | HomePage.swift | 0 | 143 | [![Coverage]($(generate_badge 0)](https://github.com/mrugama/Weather/actions) |
-
-### RestAPITests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | RestAPITests.swift | 52 | 56 | [![Coverage]($(generate_badge 93)](https://github.com/mrugama/Weather/actions) |
-
-### RestAPITests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | SearchViewModel.swift | 26 | 26 | [![Coverage]($(generate_badge 100)](https://github.com/mrugama/Weather/actions) |
-
-### RestAPITests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | SearchResultCard.swift | 0 | 106 | [![Coverage]($(generate_badge 0)](https://github.com/mrugama/Weather/actions) |
-
-### RestAPITests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | MockRestAPI.swift | 5 | 29 | [![Coverage]($(generate_badge 17)](https://github.com/mrugama/Weather/actions) |
-
-### RestAPITests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | Model.swift | 3 | 44 | [![Coverage]($(generate_badge 7)](https://github.com/mrugama/Weather/actions) |
-
-### RestAPITests
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | SearchContentUnavailableView.swift | 0 | 29 | [![Coverage]($(generate_badge 0)](https://github.com/mrugama/Weather/actions) |
-
-### Weather.app
-| File | Covered Lines | Executable Lines | Coverage |
-|------|--------------|-----------------|----------|
 | WeatherApp.swift | 0 | 8 | [![Coverage]($(generate_badge 0)](https://github.com/mrugama/Weather/actions) |
-
 ---
 
