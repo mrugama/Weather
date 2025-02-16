@@ -89,10 +89,11 @@ jobs:
           echo "[![Test Coverage]($COVERAGE_BADGE_URL)](https://github.com/mrugama/Weather/actions)" >> coverage_section.md
           echo "" >> coverage_section.md
           echo "---" >> coverage_section.md
-
-          # Group files by target and generate coverage breakdown
-          echo "### 📄 File-wise Coverage Breakdown by Target" >> coverage_section.md
-          jq -r '.targets[] | "### \(.name)\n| File | Covered Lines | Executable Lines | Coverage |\n|------|--------------|-----------------|----------|\n" + (.files[] | "| \(.name) | \(.coveredLines) | \(.executableLines) | [![Coverage]($(generate_badge \((.lineCoverage * 100) | round))](https://github.com/mrugama/Weather/actions) |") + "\n"' coverage.json >> coverage_section.md
+          echo "### 📄 File-wise Coverage Breakdown" >> coverage_section.md
+          echo "| File | Covered Lines | Executable Lines | Coverage |" >> coverage_section.md
+          echo "|------|--------------|-----------------|----------|" >> coverage_section.md
+          # Loop through each file in coverage.json and add to table
+          jq -r '.targets[].files[] | "| \(.name) | \(.coveredLines) | \(.executableLines) | [![Coverage]($(generate_badge \((.lineCoverage * 100) | round))](https://github.com/mrugama/Weather/actions) |"' coverage.json >> coverage_section.md
           echo "---" >> coverage_section.md
           echo "" >> coverage_section.md
 
