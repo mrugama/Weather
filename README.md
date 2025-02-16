@@ -13,7 +13,20 @@ The weather iOS app provides free access to weather and geo data. This is a samp
 ![Frameworks](https://img.shields.io/badge/API-OSLog-informational?style=flat&logo=Framework&logoColor=white&color=2bbc8a)
 ![Frameworks](https://img.shields.io/badge/Framework-SwiftPM-informational?style=flat&logo=Framework&logoColor=white&color=2bbc8a)
 
-## Test Coverage
+## App Architecture
+The weather-tracking app has a single feature component. `Landing Page` is a self-contained feature component with some module dependencies as shown in the graph below.
+```mermaid
+graph TD;
+    WeatherApp-->LandingPage;
+    LandingPage-->RestAPI;
+    RestAPI-->EndpointManager;
+    RestAPI-->WTLogging;
+    EndpointManager-->WTLogging;
+    RestAPI-->Networking;
+    Networking-->WTLogging;
+    LandingPage-->DecoratorUI;
+```
+
 ## Test Coverage
 [![Test Coverage](https://img.shields.io/badge/Test%20Coverage-21.067221067221066%25-green?style=flat&logo=swift&logoColor=white)](https://github.com/mrugama/Weather/actions)
 
@@ -58,19 +71,6 @@ The weather iOS app provides free access to weather and geo data. This is a samp
 | WeatherApp.swift | 0 | 8 | 0% |
 ---
 
-
-The weather-tracking app has a single feature component. `Landing Page` is a self-contained feature component with some module dependencies as shown in the graph below.
-```mermaid
-graph TD;
-    WeatherApp-->LandingPage;
-    LandingPage-->RestAPI;
-    RestAPI-->EndpointManager;
-    RestAPI-->WTLogging;
-    EndpointManager-->WTLogging;
-    RestAPI-->Networking;
-    Networking-->WTLogging;
-    LandingPage-->DecoratorUI;
-```
 | No location selected | Searching loading | Location details | Error handler
 | ---- | ---- | ---- | ---- |
 | <img src="https://github.com/user-attachments/assets/99563261-6435-4550-8054-68d6ea7c6792" alt="No city selected" width="200"> | <img src="https://github.com/user-attachments/assets/2bbd802d-576e-4c8c-b154-0c0eb443ffbf" alt="Search loading" width="200"> | <img src="https://github.com/user-attachments/assets/14c83383-b927-49a0-b985-ac94d0411175" alt="Location details" width="200"> | <img src="https://github.com/user-attachments/assets/fdf4cc61-d0d8-4be5-bacd-d780d2daf7a0" alt="Error handler" width="200"> |
