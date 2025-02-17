@@ -64,8 +64,7 @@ let package = Package(
         .testTarget(
             name: "NetworkingTests",
             dependencies: [
-                "Networking",
-                "NetworkingTestUtilities",
+                "Networking"
             ],
             path: "Sources/Foundation/NetworkingTests"
         ),
@@ -82,8 +81,7 @@ let package = Package(
             dependencies: [
                 "NetworkingTestUtilities",
                 "RestAPI",
-                "RestAPITestUtilities",
-                "LandingPage"
+                "RestAPITestUtilities"
             ],
             path: "Sources/WeatherFeature/RestAPITests"
         ),

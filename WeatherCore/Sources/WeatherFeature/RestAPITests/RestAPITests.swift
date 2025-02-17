@@ -1,7 +1,6 @@
 import Foundation
 import NetworkingTestUtilities
 @testable import RestAPI
-@testable import LandingPage
 import RestAPITestUtilities
 import Testing
 
@@ -72,6 +71,23 @@ struct RestAPITests {
             // Then
             #expect(error is URLError)
             #expect(error as! URLError == URLError(.badServerResponse))
+        }
+    }
+    
+    struct WeatherModel:Decodable {
+        let location: Location
+        let current: Current
+        
+        struct Location: Decodable {
+            let name: String
+        }
+        
+        struct Current: Decodable {
+            let condition: Condition
+            
+            struct Condition: Decodable {
+                let text: String
+            }
         }
     }
 }
