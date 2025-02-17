@@ -4,9 +4,16 @@ import WTLogging
 
 struct ConcreteDataLoader: DataLoader {
     
-    func load(urlRequest: URLRequest) async throws -> Data {
+    func load(urlStr: String) async throws -> Data {
         let logger = Logger(module: .networking)
-        let (data, response) = try await URLSession.shared.data(for: urlRequest)
+        guard let url = URL(string: urlStr) else {
+            logger.error("\(NetworkError.invalidURL)")
+            throw NetworkError.invalidURL
+        }
+        let urlRequest = URLRequest(url: url)
+        guard let (data, response) = try? await URLSession.shared.data(for: urlRequest) else {
+            throw NetworkError.requestFailed(statusCode: 0)
+        }
         
         guard let httpResponse = response as? HTTPURLResponse else {
             logger.error("\(NetworkError.invalidResponse)")

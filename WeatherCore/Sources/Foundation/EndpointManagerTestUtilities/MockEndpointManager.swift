@@ -10,14 +10,14 @@ public final class MockEndpointManager: EndpointManager, @unchecked Sendable {
         self.endpoint = endpoint
     }
 
-    public func callAsFunction() throws -> URLRequest {
+    public func callAsFunction() throws -> String {
         switch endpoint {
         case .search(let resource):
             switch resource {
             case .city(let cityName):
-                return URLRequest(url: URL(string: "https://api.example.com/search/city/\(cityName)")!)
+                return "https://api.example.com/search/city/\(cityName)"
             case .asset(let assetName):
-                return URLRequest(url: URL(string: "https://cdn.example.com/asset/\(assetName)")!)
+                return "https://cdn.example.com/asset/\(assetName)"
             }
         }
     }

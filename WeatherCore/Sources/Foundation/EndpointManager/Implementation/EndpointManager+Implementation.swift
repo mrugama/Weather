@@ -26,13 +26,13 @@ struct ConcreteEndpointManager: EndpointManager {
         self.configuration = configuration
     }
     
-    func callAsFunction() throws -> URLRequest {
+    func callAsFunction() throws -> String {
         guard let url = makeURL()
         else {
             logger.error("\(EndpointError.invalidURL)")
             throw EndpointError.invalidURL
         }
-        return URLRequest(url: url)
+        return url.absoluteString
     }
 }
 

@@ -13,7 +13,7 @@ public protocol EndpointManager
 where Self: Sendable {
     init(_ endpoint: EndpointConfiguration)
     
-    func callAsFunction() throws -> URLRequest
+    func callAsFunction() throws -> String
 }
 
 public protocol EndpointManagerService where Self: Sendable {
