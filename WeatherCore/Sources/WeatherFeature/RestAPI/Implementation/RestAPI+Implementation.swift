@@ -19,8 +19,8 @@ struct ConcreteRestAPI: RestAPI {
     }
     
     func fetch<T>(_ city: String) async throws -> T where T : Decodable {
-        let endpointRequest = endpointManagerService.provideEndpointManager(.search(.city(city)))
-        let data = try await dataLoader.load(urlRequest: endpointRequest())
+        let endpointUrlStr = endpointManagerService.provideEndpointManager(.search(.city(city)))
+        let data = try await dataLoader.load(urlStr: endpointUrlStr())
         let jsonDecoder = JSONDecoder()
         jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
         guard let decodedData = try? jsonDecoder.decode(T.self, from: data) else {
@@ -32,7 +32,7 @@ struct ConcreteRestAPI: RestAPI {
     
     func fetchAsset(icon: String) async throws -> Data {
         let configuration: EndpointConfiguration = .search(.asset(icon))
-        let endpointRequest = endpointManagerService.provideEndpointManager(configuration)
-        return try await dataLoader.load(urlRequest: endpointRequest())
+        let endpointUrlStr = endpointManagerService.provideEndpointManager(configuration)
+        return try await dataLoader.load(urlStr: endpointUrlStr())
     }
 }

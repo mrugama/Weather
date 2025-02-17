@@ -1,42 +1,66 @@
 import Foundation
 @testable import Networking
-@testable import NetworkingTestUtilities
 import Testing
 
 @Suite("Networking Tests")
 struct DataLoaderTests {
-    var dataLoader: MockDataLoader
+    var dataLoader: DataLoader
     
     init() {
-        self.dataLoader = MockDataLoader()
+        self.dataLoader = ConcreteDataLoaderService().provideDataLoader()
     }
     
     @Test("Load data success")
     func loadDataSuccess() async throws {
         // Given
-        let expectedData = "Success Data".data(using: .utf8)
-        dataLoader.dataToReturn = expectedData
-        let urlRequest = URLRequest(url: URL(string: "https://example.com")!)
+        let urlStr = "https://github.com/mrugama/Weather/blob/master/coverage.json"
         
         // When
-        let data = try await dataLoader.load(urlRequest: urlRequest)
+        let data = try await dataLoader.load(urlStr: urlStr)
         
-        #expect(data == expectedData)
+        #expect(!data.isEmpty)
     }
     
-    @Test("Load data failure")
-    func loadDataFailure() async throws {
+    @Test("Empty url string")
+    func emptyURLString() async throws {
         // Given
-        let expectedError = URLError(.badURL)
-        dataLoader.errorToThrow = expectedError
-        let urlRequest = URLRequest(url: URL(string: "https://example.com")!)
+        let urlStr = ""
         
         // When/Then
         do {
-            let _ = try await dataLoader.load(urlRequest: urlRequest)
+            let _ = try await dataLoader.load(urlStr: urlStr)
             Issue.record("Expected error to be thrown.")
-        } catch {
-            #expect(error.localizedDescription == expectedError.localizedDescription)
+        } catch (let error as NetworkError) {
+            #expect(error == .invalidURL)
+            #expect(error.localizedDescription == "Invalid URL")
+        }
+    }
+    
+    @Test("Bad url string")
+    func badURLString() async throws {
+        // Given
+        let urlStr = "htp://some.x"
+        
+        // When/Then
+        do {
+            let _ = try await dataLoader.load(urlStr: urlStr)
+            Issue.record("Expected error to be thrown.")
+        } catch (let error as NetworkError) {
+            #expect(error == .requestFailed(statusCode: 0))
+        }
+    }
+    
+    @Test("Bad url string")
+    func noFoundURL() async throws {
+        // Given
+        let urlStr = "https://www.google.com/404"
+        
+        // When/Then
+        do {
+            let _ = try await dataLoader.load(urlStr: urlStr)
+            Issue.record("Expected error to be thrown.")
+        } catch (let error as NetworkError) {
+            #expect(error == .requestFailed(statusCode: 404))
         }
     }
 }

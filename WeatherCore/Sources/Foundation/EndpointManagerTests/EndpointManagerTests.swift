@@ -14,7 +14,7 @@ struct EndpointManagerTests {
         let request = try endpointManager()
         
         // Then
-        #expect(request.url?.absoluteString == "https://api.example.com/search/city/NewYork")
+        #expect(request == "https://api.example.com/search/city/NewYork")
     }
     
     @Test("Asset Search Endpoint")
@@ -27,6 +27,6 @@ struct EndpointManagerTests {
         let request = try endpointManager()
         
         // Then
-        #expect(request.url?.absoluteString == "https://cdn.example.com/asset/1234")
+        #expect(request == "https://cdn.example.com/asset/1234")
     }
 }

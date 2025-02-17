@@ -11,18 +11,16 @@ public final class MockRestAPI: RestAPI, Sendable {
     }
 
     public func fetch<T: Decodable>(_ city: String) async throws -> T {
-        let url = URL(string: "https://api.example.com/city/\(city)")!
-        let request = URLRequest(url: url)
-        let data = try await dataLoader.load(urlRequest: request)
+        let urlStr = "https://api.example.com/city/\(city)"
+        let data = try await dataLoader.load(urlStr: urlStr)
         let decoder = JSONDecoder()
         decoder.keyDecodingStrategy = .convertFromSnakeCase
         return try decoder.decode(T.self, from: data)
     }
 
     public func fetchAsset(icon: String) async throws -> Data {
-        let url = URL(string: "https://api.example.com/asset/\(icon)")!
-        let request = URLRequest(url: url)
-        return try await dataLoader.load(urlRequest: request)
+        let urlStr = "https://api.example.com/asset/\(icon)"
+        return try await dataLoader.load(urlStr: urlStr)
     }
 }
 

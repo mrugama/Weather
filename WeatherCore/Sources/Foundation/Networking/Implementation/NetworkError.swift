@@ -1,8 +1,7 @@
 import Foundation
 
 enum NetworkError: LocalizedError, Equatable {
-    case invalidURL,
-         invalidResponse,
+    case invalidURL,invalidResponse,
          requestFailed(statusCode: Int)
     
     var errorDescription: String? {

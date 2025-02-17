@@ -2,7 +2,7 @@ import Foundation
 
 public protocol DataLoader
 where Self: Sendable {
-    func load(urlRequest: URLRequest) async throws -> Data
+    func load(urlStr: String) async throws -> Data
 }
 
 public protocol DataLoaderService
