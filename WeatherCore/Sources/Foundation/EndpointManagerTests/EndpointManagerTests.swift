@@ -1,5 +1,5 @@
 @testable import EndpointManager
-@testable import EndpointManagerTestUtilities
+import EndpointManagerTestUtilities
 import Testing
 
 @Suite("EndpointManager Tests")
