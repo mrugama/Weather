@@ -58,7 +58,7 @@ graph TD;
 ## Test Coverage
 
 ### 📊 General Coverage
-![Test Coverage](https://img.shields.io/badge/Coverage-21%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention)
+![Test Coverage](https://img.shields.io/badge/Coverage-31%25-yellow?style=flat&logo=swift&logoColor=white&label=Good%20Job)
 
 ---
 ### 📄 File-wise Coverage Breakdown
@@ -69,32 +69,31 @@ graph TD;
 | MockEndpointManager.swift | 14 | 14 | ![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
 | EndpointManagerTests.swift | 22 | 22 | ![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
 | LandingPage.swift | 0 | 9 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
-| SearchViewModelTests.swift | 33 | 33 | ![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
-| SearchResultContent.swift | 0 | 188 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
-| MockDataLoader.swift | 7 | 8 | ![Coverage](https://img.shields.io/badge/Coverage-88%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
-| HomePage.swift | 0 | 143 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| Model.swift | 43 | 44 | ![Coverage](https://img.shields.io/badge/Coverage-98%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
 | SearchViewModel.swift | 26 | 26 | ![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
-| SearchResultCard.swift | 0 | 106 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
-| MockRestAPI.swift | 5 | 29 | ![Coverage](https://img.shields.io/badge/Coverage-17%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
-| Model.swift | 3 | 44 | ![Coverage](https://img.shields.io/badge/Coverage-7%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
 | SearchContentUnavailableView.swift | 0 | 29 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
-| NetworkError.swift | 0 | 8 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
-| MockDataLoader.swift | 7 | 8 | ![Coverage](https://img.shields.io/badge/Coverage-88%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
-| DataLoader+Implementation.swift | 0 | 18 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
-| DataLoaderService.swift | 0 | 4 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
-| DataLoaderTests.swift | 27 | 28 | ![Coverage](https://img.shields.io/badge/Coverage-96%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
+| HomePage.swift | 0 | 143 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| SearchResultCard.swift | 0 | 106 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| SearchResultContent.swift | 0 | 188 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
 | LandingPage.swift | 0 | 9 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| SearchViewModelTests.swift | 43 | 43 | ![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
 | SearchResultContent.swift | 0 | 188 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
-| RestAPI+Implementation.swift | 19 | 22 | ![Coverage](https://img.shields.io/badge/Coverage-86%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
 | MockDataLoader.swift | 7 | 8 | ![Coverage](https://img.shields.io/badge/Coverage-88%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
-| RestAPI.swift | 4 | 4 | ![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
 | HomePage.swift | 0 | 143 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
-| RestAPITests.swift | 52 | 56 | ![Coverage](https://img.shields.io/badge/Coverage-93%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
 | SearchViewModel.swift | 26 | 26 | ![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
 | SearchResultCard.swift | 0 | 106 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
-| MockRestAPI.swift | 5 | 29 | ![Coverage](https://img.shields.io/badge/Coverage-17%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
-| Model.swift | 3 | 44 | ![Coverage](https://img.shields.io/badge/Coverage-7%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| MockRestAPI.swift | 5 | 13 | ![Coverage](https://img.shields.io/badge/Coverage-38%25-yellow?style=flat&logo=swift&logoColor=white&label=Good%20Job) |
+| Model.swift | 43 | 44 | ![Coverage](https://img.shields.io/badge/Coverage-98%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
 | SearchContentUnavailableView.swift | 0 | 29 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
+| NetworkError.swift | 7 | 8 | ![Coverage](https://img.shields.io/badge/Coverage-88%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
+| DataLoader+Implementation.swift | 23 | 26 | ![Coverage](https://img.shields.io/badge/Coverage-88%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
+| DataLoaderService.swift | 4 | 4 | ![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
+| DataLoaderTests.swift | 46 | 49 | ![Coverage](https://img.shields.io/badge/Coverage-94%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
+| RestAPI.swift | 4 | 4 | ![Coverage](https://img.shields.io/badge/Coverage-100%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
+| RestAPITests.swift | 52 | 56 | ![Coverage](https://img.shields.io/badge/Coverage-93%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
+| MockDataLoader.swift | 7 | 8 | ![Coverage](https://img.shields.io/badge/Coverage-88%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
+| MockRestAPI.swift | 5 | 13 | ![Coverage](https://img.shields.io/badge/Coverage-38%25-yellow?style=flat&logo=swift&logoColor=white&label=Good%20Job) |
+| RestAPI+Implementation.swift | 19 | 22 | ![Coverage](https://img.shields.io/badge/Coverage-86%25-green?style=flat&logo=swift&logoColor=white&label=Excellent) |
 | WeatherApp.swift | 0 | 8 | ![Coverage](https://img.shields.io/badge/Coverage-0%25-red?style=flat&logo=swift&logoColor=white&label=Needs%20Attention) |
 ---
 
