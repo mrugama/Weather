@@ -75,12 +75,16 @@ struct HomePage: View {
 
 #if DEBUG
 import NetworkingTestUtilities
+import RestAPI
 import RestAPITestUtilities
 #endif
 #Preview(traits: .sizeThatFitsLayout) {
     let mockDataLoader = MockDataLoader()
     mockDataLoader.dataToReturn = provideMockWeatherData()
-    let vm = SearchViewModelImpl(MockRestAPI(mockDataLoader))
+    let vm = SearchViewModelImpl(
+        ConcreteRestAPIService()
+            .provideRestAPI(mockDataLoader)
+    )
     vm.appState = .locationDetails(
         model: provideMockWeatherModel(),
         city: "Manhattan"

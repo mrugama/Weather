@@ -11,7 +11,9 @@ public enum Module: String {
     }
 }
 
-public extension Logger {
+public typealias WTLogger = Logger
+
+public extension WTLogger {
     init (module: Module) {
         let subsystem: String = Bundle.main.bundleIdentifier ?? "com.mrugama.weather"
         self.init(subsystem: subsystem, category: module.description)
