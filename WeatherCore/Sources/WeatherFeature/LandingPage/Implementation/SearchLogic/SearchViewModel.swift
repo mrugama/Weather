@@ -1,6 +1,5 @@
 import RestAPI
 import SwiftUI
-import OSLog
 import WTLogging
 
 @MainActor
@@ -19,7 +18,7 @@ final class SearchViewModelImpl: SearchViewModel, Sendable {
     var searchText: String = ""
     let prompt: LocalizedStringKey = "Search Location"
     var appState: WeatherAppState = .noLocationSelected
-    private let logger = Logger(module: .landingPage)
+    private let logger = WTLogger(module: .landingPage)
     
     private var restAPI: RestAPI
     

@@ -1,6 +1,5 @@
 import EndpointManager
 import Foundation
-import OSLog
 import WTLogging
 import Networking
 
@@ -11,7 +10,7 @@ enum RestAPIError: LocalizedError, Equatable {
 struct ConcreteRestAPI: RestAPI {
     private let dataLoader: any DataLoader
     private let endpointManagerService: ConcreteEndpointManagerService
-    private let logger = Logger(module: .restAPI)
+    private let logger = WTLogger(module: .restAPI)
     
     init(_ dataLoader: any DataLoader) {
         self.dataLoader = dataLoader

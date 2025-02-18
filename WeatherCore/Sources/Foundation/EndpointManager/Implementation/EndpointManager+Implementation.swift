@@ -1,5 +1,4 @@
 import Foundation
-import OSLog
 import WTLogging
 
 enum EndpointError: LocalizedError, Equatable {
@@ -18,7 +17,7 @@ struct ConcreteEndpointManager: EndpointManager {
         "PASTE-YOUR-KEYAPI-HERE"
     }
     
-    private let logger = Logger(module: .endpoint)
+    private let logger = WTLogger(module: .endpoint)
     
     private var configuration: EndpointConfiguration
     

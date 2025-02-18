@@ -1,11 +1,10 @@
 import Foundation
-import OSLog
 import WTLogging
 
 struct ConcreteDataLoader: DataLoader {
     
     func load(urlStr: String) async throws -> Data {
-        let logger = Logger(module: .networking)
+        let logger = WTLogger(module: .networking)
         guard let url = URL(string: urlStr) else {
             logger.error("\(NetworkError.invalidURL)")
             throw NetworkError.invalidURL
