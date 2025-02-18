@@ -56,9 +56,10 @@ jobs:
             exit 1
           fi
 
-      - name: Move coverage.json to repo root
+      - name: Extract coverage data
         run: |
-          mv coverage/coverage.json coverage.json
+          mkdir -p coverage
+          xcrun xccov view --report --json TestResults.xcresult > coverage.json
 
       - name: Update README with Test Coverage
         run: |
