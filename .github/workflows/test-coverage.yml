@@ -131,4 +131,4 @@ jobs:
           git add coverage.json
           git add README.md
           git commit -m "Update test coverage report" || exit 0
-          git push origin HEAD:master
+          git push origin HEAD:master --force-with-lease
