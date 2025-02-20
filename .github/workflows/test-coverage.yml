@@ -126,6 +126,8 @@ jobs:
           git config --global user.name "mrugama"
           git config --global user.email "mrugama@gmail.com"
           git remote set-url origin https://mrugama:${GH_PAT}@github.com/mrugama/Weather.git
+          git fetch origin master
+          git rebase origin/master
           git add coverage.json
           git add README.md
           git commit -m "Update test coverage report" || exit 0
