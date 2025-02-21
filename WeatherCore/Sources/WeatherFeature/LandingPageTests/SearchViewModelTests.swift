@@ -46,6 +46,7 @@ struct WeatherViewModelTests {
         #expect(model?.icon64x64URL.absoluteString == "https://cdn.weatherapi.com/weather/64x64/day/113.png")
         #expect(model?.icon128x128URL.absoluteString == "https://cdn.weatherapi.com/weather/128x128/day/113.png")
         #expect(viewModel.appState != .somethingWentWrong(error: "Unable to fetch data"))
+        #expect(model == provideMockWeatherModel())
     }
     
     @Test("Fetch from online failed")

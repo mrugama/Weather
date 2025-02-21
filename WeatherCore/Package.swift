@@ -91,6 +91,7 @@ let package = Package(
                 "NetworkingTestUtilities",
                 "RestAPITestUtilities",
                 "LandingPage",
+                "RestAPI",
             ],
             path: "Sources/WeatherFeature/LandingPageTests"
         ),
