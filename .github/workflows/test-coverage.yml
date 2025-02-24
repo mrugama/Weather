@@ -118,6 +118,12 @@ jobs:
           # Clean up temporary file
           rm coverage_section.md
 
+      - name: Fetch latest changes from master
+        run: |
+          git fetch origin master
+          git checkout master
+          git merge origin/master --no-edit
+
       - name: Commit and push coverage report
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
