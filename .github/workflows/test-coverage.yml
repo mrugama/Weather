@@ -26,7 +26,7 @@ jobs:
         run: |
           xcodebuild build \
             -project Weather.xcodeproj \
-            -scheme ExistingSchemeName \
+            -scheme Weather \
             -destination 'platform=iOS Simulator,name=iPhone 16' \
             | tee xcodebuild.log
 
@@ -58,7 +58,6 @@ jobs:
 
       - name: Extract coverage data
         run: |
-          mkdir -p coverage
           xcrun xccov view --report --json TestResults.xcresult > coverage.json
 
       - name: Update README with Test Coverage
@@ -119,6 +118,12 @@ jobs:
           # Clean up temporary file
           rm coverage_section.md
 
+      - name: Fetch latest changes from master
+        run: |
+          git fetch origin master
+          git checkout master
+          git merge origin/master --no-edit
+
       - name: Commit and push coverage report
         env:
           GH_PAT: ${{ secrets.GH_PAT }}
@@ -129,4 +134,5 @@ jobs:
           git add coverage.json
           git add README.md
           git commit -m "Update test coverage report" || exit 0
+          git checkout .
           git push origin HEAD:master
